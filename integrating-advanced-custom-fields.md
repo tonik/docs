@@ -1,4 +1,5 @@
 ---
+extends: _layouts.docs
 title: "Integrating Advanced Custom Fields"
 group: "Extending"
 ---

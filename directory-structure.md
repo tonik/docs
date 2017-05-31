@@ -1,4 +1,5 @@
 ---
+extends: _layouts.docs
 title: "Dirctory structure"
 group: "Basics"
 ---

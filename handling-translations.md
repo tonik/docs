@@ -1,4 +1,5 @@
 ---
+extends: _layouts.docs
 title: "Handling translations"
 group: "Basics"
 section: "Setup"

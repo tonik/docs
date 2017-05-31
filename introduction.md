@@ -1,4 +1,5 @@
 ---
+extends: _layouts.docs
 title: "Introduction"
 group: "Getting Started"
 ---

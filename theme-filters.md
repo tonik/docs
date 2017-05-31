@@ -1,4 +1,5 @@
 ---
+extends: _layouts.docs
 title: "Theme filters"
 group: "Basics"
 section: "Setup"

@@ -1,4 +1,5 @@
 ---
+extends: _layouts.docs
 title: "Using service container"
 group: "Basics"
 section: "Setup"

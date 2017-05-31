@@ -1,4 +1,5 @@
 ---
+extends: _layouts.docs
 title: "Registering stylesheets and scripts"
 group: "Basics"
 section: "Http"

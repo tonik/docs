@@ -1,4 +1,5 @@
 ---
+extends: _layouts.docs
 title: "Registering sidebars"
 group: "Basics"
 section: "Structure"

@@ -1,4 +1,5 @@
 ---
+extends: _layouts.docs
 title: "Creating templates"
 group: "Basics"
 ---

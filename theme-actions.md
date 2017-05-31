@@ -1,4 +1,5 @@
 ---
+extends: _layouts.docs
 title: "Theme actions"
 group: "Basics"
 section: "Setup"
