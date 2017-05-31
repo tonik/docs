@@ -1,5 +1,5 @@
 ---
-extends: _layouts.docs
+extends: docs
 title: "Theme Service Container"
 group: "Architecture"
 ---

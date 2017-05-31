@@ -1,5 +1,5 @@
 ---
-extends: _layouts.docs
+extends: docs
 title: "Adding menus and navigations"
 group: "Basics"
 section: "Structure"

@@ -1,5 +1,5 @@
 ---
-extends: _layouts.docs
+extends: docs
 title: "Registering custom taxonomies"
 group: "Basics"
 section: "Structure"

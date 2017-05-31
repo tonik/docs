@@ -1,5 +1,5 @@
 ---
-extends: _layouts.docs
+extends: docs
 title: "Registering custom post types"
 group: "Basics"
 section: "Structure"

@@ -1,5 +1,5 @@
 ---
-extends: _layouts.docs
+extends: docs
 title: "Defining AJAX responses"
 group: "Basics"
 section: "Http"

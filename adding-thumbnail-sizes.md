@@ -1,5 +1,5 @@
 ---
-extends: _layouts.docs
+extends: docs
 title: "Adding thumbnail sizes"
 group: "Basics"
 section: "Structure"

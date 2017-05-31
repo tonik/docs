@@ -1,5 +1,5 @@
 ---
-extends: _layouts.docs
+extends: docs
 title: "Adding theme supports"
 group: "Basics"
 section: "Setup"
