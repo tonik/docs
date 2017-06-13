@@ -19,17 +19,13 @@ Project textdomain string can be configured inside `config/app.php` file with `t
 
 When project translations are properly loaded you can start making your theme multilanguage ready. You can retrieve sentences from language files using the `__` gettext function.
 
-```php
-echo __('Hello world!')
-```
+<pre class="pre"><code class="language-php">echo __('Hello world!')</code></pre>
 
 Note! Instead of explicitly entering your project textdomain string you should take advantage of theme configuration. Use [`config()`]() helper function to pull textdomain directly from `config/app.php` file.
 
-```php
-use function App\Theme\config;
+<pre class="pre"><code class="language-php">use function App\Theme\config;
 
-echo __('Hello world!', config('textdomain'))
-```
+echo __('Hello world!', config('textdomain'))</code></pre>
 
 ## Translating
 

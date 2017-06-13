@@ -20,13 +20,11 @@ theme
 
 Remember to add a file path of the new component to autoload list inside a configuration file.
 
-```php
-'autoload' => [
+<pre class="pre"><code class="language-php">'autoload' => [
     //...
     'Structure/ACF/settings.php',
     //...
-],
-```
+],</code></pre>
 
 ## Examples
 
@@ -34,8 +32,7 @@ Remember to add a file path of the new component to autoload list inside a confi
 
 Let's create the settings page for our theme.
 
-```php
-namespace App\Theme\Structure\ACF;
+<pre class="pre"><code class="language-php">namespace App\Theme\Structure\ACF;
 
 use function App\Theme\config;
 
@@ -45,5 +42,4 @@ acf_add_options_page([
     'menu_slug' => 'theme-settings',
     'capability' => 'edit_posts',
     'redirect' => false
-]);
-```
+]);</code></pre>

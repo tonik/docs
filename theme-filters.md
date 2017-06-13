@@ -9,15 +9,13 @@ Filters can change an output or behavior of different parts of your theme or Wor
 
 Inside you can see a standard example of modifying the length of the excerpt.
 
-```php
-namespace App\Theme\Setup;
+<pre class="pre"><code class="language-php">namespace App\Theme\Setup;
 
 function modify_excerpt_length()
 {
     return 60;
 }
-add_filter('excerpt_length', 'App\Theme\Setup\modify_excerpt_length');
-```
+add_filter('excerpt_length', 'App\Theme\Setup\modify_excerpt_length');</code></pre>
 
 ## Examples
 
@@ -25,18 +23,15 @@ add_filter('excerpt_length', 'App\Theme\Setup\modify_excerpt_length');
 
 Controlling sidebar visibility is a great use case for custom filters. Let's start with creating markup of our sidebar inside filtered conditional.
 
-```html
-<?php if (apply_filters('theme/sidebar/visibility', true)): ?>
+<pre class="pre"><code class="language-html"><?php if (apply_filters('theme/sidebar/visibility', true)): ?>
     <aside>
         <?php get_sidebar() ?>
     </aside>
-<?php endif ?>
-```
+<?php endif ?></code></pre>
 
 Create a filter which hides the sidebar on a page with 404 error view.
 
-```php
-namespace App\Theme\Setup;
+<pre class="pre"><code class="language-php">namespace App\Theme\Setup;
 
 function display_sidebar($status)
 {
@@ -48,5 +43,4 @@ function display_sidebar($status)
 
     return $status;
 }
-add_filter('theme/sidebar/visibility', 'App\Theme\Setup\display_sidebar');
-```
+add_filter('theme/sidebar/visibility', 'App\Theme\Setup\display_sidebar');</code></pre>

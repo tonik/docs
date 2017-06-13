@@ -20,15 +20,13 @@ Theme uses [NPM](//www.npmjs.com/) as a front-end dependency manager and [Compos
 
 Before be able to build theme you have to resolve required dependencies.
 
-```bash
-# @ wp-content/themes/<theme-name>
+<pre class="pre pre--dark"><code class="language-bash"># @ wp-content/themes/<theme-name>
 
 # Install composer dependencies.
 $ composer install
 
 # Install node dependencies.
-$ npm install
-```
+$ npm install</code></pre>
 
 Now you have all the packages necessary to run the build process and start developing your theme.
 
@@ -36,8 +34,7 @@ Now you have all the packages necessary to run the build process and start devel
 
 There are a few available commands which help you to build the theme for different environments:
 
-```bash
-# @ wp-content/themes/<theme-name>
+<pre class="pre pre--dark"><code class="language-bash"># @ wp-content/themes/<theme-name>
 
 # Compiles unminified and unoptimized theme assets with source maps.
 $ npm run development
@@ -53,8 +50,7 @@ $ npm run prod
 
 # Builds assets for development, runs watcher (recompiles on change)
 # and BroswerSync (refreshes browser).
-$ npm run watch
-```
+$ npm run watch</code></pre>
 
 ## Handling project dependencies
 
@@ -62,42 +58,32 @@ $ npm run watch
 
 All of the front-end packages necessary for your theme can be found in the `package.json`. Of course, you can specify and install other packages required by your project with [`npm install`](https://docs.npmjs.com/cli/install) command or by adding additional fields to the `package.json` file.
 
-```bash
-# @ wp-content/themes/<theme-name>
-npm install foundation-sites
-```
+<pre class="pre pre--dark"><code class="language-bash"># @ wp-content/themes/<theme-name>
+npm install foundation-sites</code></pre>
 
 Builder helps you also with importing third-party stylesheet libraries. Instead of referring path directly to the `node_modules/` directory, simply include it with `~` at the beginning. Builder will take care of it for you.
 
-```scss
-@import '~foundation-sites/scss/foundation';
-```
+<pre class="pre"><code class="language-scss">@import '~foundation-sites/scss/foundation';</code></pre>
 
 Thanks to Babel you can use all of [ES6](https://babeljs.io/learn-es2015/) goodness. Especially, importing external scripts as modules.
 
-```js
-// CommonJS
+<pre class="pre"><code class="language-javascript">// CommonJS
 require('foundation-sites')
 
 // ES6 Modules
-import $ from 'jquery'
-```
+import $ from 'jquery'</code></pre>
 
 ### Backend-end dependencies
 
 The starter is configured to pull in Composer’s autoload file. All you need to do is require the desired package.
 
-```bash
-# @ wp-content/themes/<theme-name>
-composer require monolog/monolog
-```
+<pre class="pre pre--dark"><code class="language-bash"># @ wp-content/themes/<theme-name>
+composer require monolog/monolog</code></pre>
 
 Afterward, it will be available inside every component of the project. Just import package namespaces and use it.
 
-```php
-use Monolog\Logger;
-use Monolog\Handler\StreamHandler;
-```
+<pre class="pre"><code class="language-php">use Monolog\Logger;
+use Monolog\Handler\StreamHandler;</code></pre>
 
 ## Environment configuration
 
@@ -107,39 +93,33 @@ use Monolog\Handler\StreamHandler;
 
 Configure its settings in `config/app.json` file and start Webpack's development server using the `npm run watch` command. Now, after every file modification, your changes will be instantly reflected in the browser.
 
-```json
-"settings": {
+<pre class="pre"><code class="language-json">"settings": {
   "browserSync": {
     "host": "localhost",
     "port": 3000,
     "proxy": "http://localhost:8080/"
   }
-}
-```
+}</code></pre>
 
 For example, if you are using [Wocker](//wckr.github.io/), simply pass `wocker.dev` domain as a proxy field value. After you should be able to visit your WordPress installation at http://localhost:3000/ address.
 
-```json
-"settings": {
+<pre class="pre"><code class="language-json">"settings": {
   "browserSync": {
     "host": "localhost",
     "port": 3000,
     "proxy": "http://wocker.dev/"
   }
-}
-```
+}</code></pre>
 
 ### Linting project stylesheets
 
 You can configure linting rules for project in `.stylelintrc` file. By default, starter setups only 4 space indentation. It doesn't enforce you to uncomfortable settings, so feel free to add here your own set of rules. You can find all available rules on [Stylelint website](https://stylelint.io/user-guide/rules/).
 
-```json
-{
+<pre class="pre"><code class="language-json">{
   "rules": {
     "indentation": 4
   }
-}
-```
+}</code></pre>
 
 ## Customizing build process
 
@@ -149,14 +129,12 @@ Builder rules and procedures are stored in the `build/` directory. Default setti
 
 You can control outputted names with `outputs` property in `config/app.json` file. Object structure should look like this:
 
-```json
-"outputs": {
+<pre class="pre"><code class="language-json">"outputs": {
   "css": { "filename": "css/[name].css" },
   "font": { "filename": "fonts/[name].[ext]" },
   "image": { "filename": "images/[name].[ext]" },
   "javascript": { "filename": "js/[name].js" }
-}
-```
+}</code></pre>
 
 As you see, filenames have to use [Webpack placeholders](https://webpack.js.org/configuration/output/#output-filename) to determine asset name or extension.
 
@@ -166,40 +144,32 @@ To bypass conflicts with global variables, scripts outputted by Webpack are encl
 
 By default, starter gives you access to the jQuery shipped with WordPress.
 
-```json
-"externals": {
+<pre class="pre"><code class="language-json">"externals": {
   "jquery": "jQuery"
-}
-```
+}</code></pre>
 
 Simply add to the list new entry where the key is a name (under which external will be available) and the name of the global variable as value.
 
-```json
-"externals": {
+<pre class="pre"><code class="language-json">"externals": {
   "jquery": "jQuery",
   "backbone": "Backbone"
-}
-```
+}</code></pre>
 
 Now, you can import this variable inside your theme scripts.
 
-```js
-import Backbone from 'backbone'
-```
+<pre class="pre"><code class="language-javascript">import Backbone from 'backbone'</code></pre>
 
 ### Additional features settings
 
 Additional features can be configured within `settings` property.
 
-```json
-"settings": {
+<pre class="pre"><code class="language-json">"settings": {
   "browserSync": {
     "host": "localhost",
     "port": 3000,
     "proxy": "http://localhost:8080/"
   }
-}
-```
+}</code></pre>
 
 List of available options:
 

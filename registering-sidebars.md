@@ -9,8 +9,7 @@ The sidebars are areas (managed in `Appearance > Widgets`) where you can allocat
 
 Inside `sidebars.php` you will see an example sidebar. Customize it to your needs or add another one.
 
-```php
-namespace App\Theme\Structure;
+<pre class="pre"><code class="language-php">namespace App\Theme\Structure;
 
 use function App\Theme\config;
 
@@ -22,13 +21,10 @@ function register_widget_areas()
         'description' => __('Website sidebar', config('textdomain')),
     ]);
 }
-add_action('widgets_init', 'App\Theme\Structure\register_widget_areas');
-```
+add_action('widgets_init', 'App\Theme\Structure\register_widget_areas');</code></pre>
 
 ## Usage
 
 To render sidebar content just run `dynamic_sidebar` function with a previously registered sidebar name.
 
-```php
-dynamic_sidebar('sidebar');
-```
+<pre class="pre"><code class="language-php">dynamic_sidebar('sidebar');</code></pre>

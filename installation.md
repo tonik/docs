@@ -17,23 +17,17 @@ A starter has a few dependencies. They are extracted to separate packages for ea
 
 WordPress themes lives in the `wp-content/themes` folder. This is where we have to fetch our fresh starter files.
 
-```bash
-# Go to the `themes` directory of your WordPress installation.
-$ cd wp-content/themes
-```
+<pre class="pre pre--dark"><code class="language-bash"># Go to the `themes` directory of your WordPress installation.
+$ cd wp-content/themes</code></pre>
 
 Create project via `composer create-project` composer command.
 
-```bash
-$ composer create-project tonik/tonik <theme-name>
-```
+<pre class="pre pre--dark"><code class="language-bash">$ composer create-project tonik/tonik <theme-name></code></pre>
 
 You can also directly download or clone the repository to the `wp-content/themes` directory.
 
-```bash
-# Clone repository to the <theme-name> folder.
-$ git clone git@github.com:tonik/tonik.git <theme-name>
-```
+<pre class="pre pre--dark"><code class="language-bash"># Clone repository to the <theme-name> folder.
+$ git clone git@github.com:tonik/tonik.git <theme-name></code></pre>
 
 ## Resolving Theme Dependencies
 
@@ -41,39 +35,29 @@ $ git clone git@github.com:tonik/tonik.git <theme-name>
 
 In order to property bootstrap a theme you have to fetch some required dependencies and compile its assets. Before that, make sure that you are in the root folder of the theme (where `package.json` and `composer.json` files are located).
 
-```bash
-# @ wp-content/themes
-$ cd <theme-name>
-```
+<pre class="pre pre--dark"><code class="language-bash"># @ wp-content/themes
+$ cd <theme-name></code></pre>
 
 #### 1. Install back-end dependencies and generate an autoloading file.
 
-```bash
-# Install composer dependencies.
-$ composer install
-```
+<pre class="pre pre--dark"><code class="language-bash"># Install composer dependencies.
+$ composer install</code></pre>
 
 #### 2. Install front-end dependencies and builder.
 
-```bash
-# Install node dependencies.
-$ npm install
-```
+<pre class="pre pre--dark"><code class="language-bash"># Install node dependencies.
+$ npm install</code></pre>
 
 #### 3. Build a Theme
 
 Let's prebuild the theme to avoid error about missing enqueued assets.
 
-```bash
-# Build a theme for development.
-$ npm run dev
-```
+<pre class="pre pre--dark"><code class="language-bash"># Build a theme for development.
+$ npm run dev</code></pre>
 
 ## Activate Theme
 
 Now, you are ready to turn on your newly created theme. Go to the WordPress admin panel and activate the theme on `Appearance > Themes` page. Familiar with WP-CLI? Use `theme activate` command.
 
-```bash
-# Activate newly created theme.
-$ wp theme activate <theme-name>
-```
+<pre class="pre pre--dark"><code class="language-bash"># Activate newly created theme.
+$ wp theme activate <theme-name></code></pre>

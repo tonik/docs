@@ -9,7 +9,7 @@ Navigations allow for creating easily customizable menus areas, which can be man
 
 By default, starter registers the "Primary" navigation.
 
-<pre class="pre pre--dark"><code class="language-php">namespace App\Theme\Structure;
+<pre class="pre"><code class="language-php">namespace App\Theme\Structure;
 
 use function App\Theme\config;
 
@@ -23,8 +23,7 @@ add_action('after_setup_theme', 'App\Theme\Structure\register_navigation_areas')
 
 Add new entries to the array in order to register additional navigations. Assist yourself by using `config()` function to localize menu titles.
 
-```php
-namespace App\Theme\Structure;
+<pre class="pre"><code class="language-php">namespace App\Theme\Structure;
 
 use function App\Theme\config;
 
@@ -35,15 +34,12 @@ function register_navigation_areas()
         'secondary' => __('Secondary', config('textdomain')),
     ]);
 }
-add_action('after_setup_theme', 'App\Theme\Structure\register_navigation_areas');
-```
+add_action('after_setup_theme', 'App\Theme\Structure\register_navigation_areas');</code></pre>
 
 ## Usage
 
 Use `wp_nav_menu` to output menu assigned to previously registered navigation area.
 
-```php
-wp_nav_menu([
+<pre class="pre"><code class="language-php">wp_nav_menu([
     'theme_location' => 'secondary'
-]);
-```
+]);</code></pre>
