@@ -9,8 +9,7 @@ Navigations allow for creating easily customizable menus areas, which can be man
 
 By default, starter registers the "Primary" navigation.
 
-```php
-namespace App\Theme\Structure;
+<pre class="pre pre--dark"><code class="language-php">namespace App\Theme\Structure;
 
 use function App\Theme\config;
 
@@ -20,8 +19,7 @@ function register_navigation_areas()
         'primary' => __('Primary', config('textdomain')),
     ]);
 }
-add_action('after_setup_theme', 'App\Theme\Structure\register_navigation_areas');
-```
+add_action('after_setup_theme', 'App\Theme\Structure\register_navigation_areas');</code></pre>
 
 Add new entries to the array in order to register additional navigations. Assist yourself by using `config()` function to localize menu titles.
 
