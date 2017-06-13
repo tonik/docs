@@ -2,6 +2,7 @@
 extends: docs
 title: "Helper functions"
 group: "Basics"
+subgroup: "General"
 ---
 
 Starter provides a variety of global "helper" functions. They facilitate the use of starter foundation modules and functionalities. You can reach them at any moment inside your theme components.

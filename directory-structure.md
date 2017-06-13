@@ -2,6 +2,7 @@
 extends: docs
 title: "Dirctory structure"
 group: "Basics"
+subgroup: "General"
 ---
 
 This starter theme introduces "easy to follow" folder structure, which enforces to divide your theme logic into separate files. For quick overview take a look at the structure tree bellow.
