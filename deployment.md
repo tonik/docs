@@ -16,13 +16,16 @@ This theme follows WordPress [recommended requirements](https://wordpress.org/ab
 
 Download or clone theme repository to the wp-content/themes directory.
 
-<pre class="pre pre--dark"><code class="language-bash"># @ /wp-content/themes
+```bash
+# @ /wp-content/themes
 # Clone repository to the themes folder.
-$ git clone git@github.com:<repository>/<theme-name>.git <theme-name></code></pre>
+$ git clone git@github.com:<repository>/<theme-name>.git <theme-name>
+```
 
 Go into theme directory and run following commands to resolve dependencies and build a theme.
 
-<pre class="pre pre--dark"><code class="language-bash"># @ /wp-content/themes
+```bash
+# @ /wp-content/themes
 # Change directory to the cloned folder.
 $ cd <theme-name>
 
@@ -32,10 +35,13 @@ $ composer install -o --no-devs
 
 # @ /wp-content/themes/<theme-name>
 # Install required npm dependences for building a theme.
-$ npm install</code></pre>
+$ npm install
+```
 
 All files inside `public/` directory are ignored, it's recommended to not store compiled assets inside the repository. This requires us to build theme after each deploy.
 
-<pre class="pre pre--bash"><code class="language-bash"># @ /wp-content/themes/<theme-name>
+```bash
+# @ /wp-content/themes/<theme-name>
 # Build theme assets for production.
-$ npm run prod</code></pre>
+$ npm run prod
+```

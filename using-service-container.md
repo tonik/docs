@@ -25,7 +25,8 @@ You should register your project bindings within a named function which is attac
 
 Register your service with `theme()` helper inside the hooked function. Remember to import a proper use statement (`use function App\Theme\theme`).
 
-<pre class="pre"><code class="language-php">namespace App\Theme\Setup;
+```php
+namespace App\Theme\Setup;
 
 use function App\Theme\theme;
 
@@ -35,15 +36,18 @@ function bind_service()
         return true;
     });
 }
-add_action('init', 'App\Theme\Setup\bind_service');</code></pre>
+add_action('init', 'App\Theme\Setup\bind_service');
+```
 
 #### Retrieving services
 
 After service registration, you can also retrieve it with `theme()` helper function. Pass its name as the first parameter or use `get` method.
 
-<pre class="pre"><code class="language-php">theme('service');
+```php
+theme('service');
 
-theme()->get('service');</code></pre>
+theme()->get('service');
+```
 
 ## Examples
 
@@ -51,7 +55,8 @@ theme()->get('service');</code></pre>
 
 Standard binding with `bind` returns the same service on every resolving. It's a great place for fetching entries from the database because it gives you a certainty that you are querying your database only once.
 
-<pre class="pre"><code class="language-php">namespace App\Theme\Setup;
+```php
+namespace App\Theme\Setup;
 
 use function App\Theme\theme;
 use Tonik\Gin\Foundation\Theme;
@@ -75,17 +80,21 @@ function bind_genres_of_book_service()
         return wp_get_post_terms($parameters['id'], 'book_grene');
     });
 }
-add_action('init', 'App\Theme\Setup\bind_genres_of_book_service');</code></pre>
+add_action('init', 'App\Theme\Setup\bind_genres_of_book_service');
+```
 
 Now, you can simply retrieve genre terms of specific book post anywhere in your project via registered service.
 
-<pre class="pre"><code class="language-php">$genres = theme('book/genres', ['id' => get_the_ID()]);</code></pre>
+```php
+$genres = theme('book/genres', ['id' => get_the_ID()]);
+```
 
 ### Services for external API requests
 
 You may also define services which connect to the external resources. Use in pair with transients to achieve the best performance.
 
-<pre class="pre"><code class="language-php">namespace App\Theme\Setup;
+```php
+namespace App\Theme\Setup;
 
 use function App\Theme\theme;
 
@@ -116,13 +125,18 @@ function bind_api_authorize_service()
         return json_decode($response['body']);
     });
 }
-add_action('init', 'App\Theme\Setup\bind_api_authorize_service');</code></pre>
+add_action('init', 'App\Theme\Setup\bind_api_authorize_service');
+```
 
 You should define APIs configuration keys as constants in the `wp-config.php` file.
 
-<pre class="pre"><code class="language-php">define('CLIENT_ID', 'client-id');
-define('SECRET_KEY', 'secret-key');</code></pre>
+```php
+define('CLIENT_ID', 'client-id');
+define('SECRET_KEY', 'secret-key');
+```
 
 Now, with a simple resolving, you can pull all external API authorization data.
 
-<pre class="pre"><code class="language-php">$auth = theme('api/auth');</code></pre>
+```php
+$auth = theme('api/auth');
+```

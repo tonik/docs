@@ -15,7 +15,8 @@ You can register components in the `config/app.php` configuration file with `aut
 
 > Note! Make sure that `helpers.php` file is registered first. All other components usually make use of helper functions inside.
 
-<pre class="pre"><code class="language-php">'autoload' => [
+```php
+'autoload' => [
     'helpers.php',
     'Structure/navs.php',
     'Structure/widgets.php',
@@ -30,7 +31,8 @@ You can register components in the `config/app.php` configuration file with `aut
     'Setup/services.php',
     'Http/assets.php',
     'Http/ajaxes.php',
-]</code></pre>
+]
+```
 
 ## Usage
 
@@ -38,8 +40,10 @@ You can register components in the `config/app.php` configuration file with `aut
 
 In order to autoload your own new component, add a new entry to the `autoload` list. For example, you created `app/Structure/settings.php` file, so to autoload it enter `Structure/settings.php` path to the list.
 
-<pre class="pre"><code class="language-php">'autoload' => [
+```php
+'autoload' => [
     //...
     'Structure/settings.php',
     //...
-]</code></pre>
+]
+```

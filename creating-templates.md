@@ -11,15 +11,19 @@ Separation of visual layer and application logic was always a problem while deve
 
 By default template files are stored inside `resources/templates` directory. You can control it inside `config/app.php` file with `directories.templates` option.
 
-<pre class="pre"><code class="language-php">'directories' => [
+```php
+'directories' => [
     'templates' => 'resources/templates'
-]</code></pre>
+]
+```
 
 You may also customize extension of template files. By default, it is `.tpl.php`, however feel free to change it as you like in configuration file with `templates.extension` option.
 
-<pre class="pre"><code class="language-php">'templates' => [
+```php
+'templates' => [
     'extension' => '.tpl.php'
-]</code></pre>
+]
+```
 
 ## Usage
 
@@ -27,17 +31,23 @@ It is recommended to use [`template()`]() helper function to render your project
 
 #### 1. Create view the `.tpl.php` file inside project templates directory.
 
-<pre class="pre"><code class="language-html"><button><?= $title ?></button></code></pre>
+```html
+<button><?= $title ?></button>
+```
 
 #### 2. Render template with context using a `template()` function.
 
 > Visit the [Template]() documentations for more completed API guides.
 
-<pre class="pre"><code class="language-php">template('button', ['title' => 'Click me!']);</code></pre>
+```php
+template('button', ['title' => 'Click me!']);
+```
 
 You can expect this output:
 
-<pre class="pre"><code class="language-html"><button>Click me!</button></code></pre>
+```html
+<button>Click me!</button>
+```
 
 ## Examples
 
@@ -47,7 +57,8 @@ Managing templates rendering with hooks is a great way for creating a reusable a
 
 Start with creating a template view for a single post. It is a standard loop with our custom `theme/single/content` action inside. Later, we will hook up to that action and render the content of a post.
 
-<pre class="pre"><code class="language-html"><!-- @ resources/templates/single.tpl.php -->
+```html
+<!-- @ resources/templates/single.tpl.php -->
 
 <?php if (have_posts()) : ?>
     <main>
@@ -55,19 +66,23 @@ Start with creating a template view for a single post. It is a standard loop wit
             <?php do_action('theme/single/content') ?>
         <?php endwhile ?>
     </main>
-<?php endif ?></code></pre>
+<?php endif ?>
+```
 
 Inside the `single.php` controller file, we will simply render a template created above.
 
-<pre class="pre"><code class="language-php">// @ single.php
+```php
+// @ single.php
 
 use function App\Theme\template;
 
-template('single');</code></pre>
+template('single');
+```
 
 We can proceed and create a view file for a post content.
 
-<pre class="pre"><code class="language-html"><!-- @ resources/templates/partials/content.tpl.php -->
+```html
+<!-- @ resources/templates/partials/content.tpl.php -->
 
 <article>
     <header>
@@ -75,16 +90,19 @@ We can proceed and create a view file for a post content.
     </header>
 
     <p><?php the_content() ?></p>
-</article></code></pre>
+</article>
+```
 
 Now, we can hook to a `theme/single/content` action, which are executed inside `single.tpl.php` file, and render previously created template for post content.
 
-<pre class="pre"><code class="language-php">// @ app/Setup/actions.php
+```php
+// @ app/Setup/actions.php
 
 function render_post_content()
 {
     template('partials/post/content');
 }
-add_action('theme/single/content', 'App\Theme\Setup\render_post_content');</code></pre>
+add_action('theme/single/content', 'App\Theme\Setup\render_post_content');
+```
 
 Nothing blocks you from hooking template rendering handler to multiple actions. This allows you to reuse various template blocks, keep logic separation and still stay DRY. Great!

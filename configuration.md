@@ -26,8 +26,10 @@ Starter comes with simple CLI and `tonik` command, which allows you to easily fi
 
 > Important! CLI requires at least PHP in version 7.1 to be installed on your machine.
 
-<pre class="pre pre--dark"><code class="language-bash"># Run setup wizard.
-$ vendor/bin/tonik</code></pre>
+```bash
+# Run setup wizard.
+$ vendor/bin/tonik
+```
 
 ## Configuration Files
 

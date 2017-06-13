@@ -12,48 +12,58 @@ The `Tonik\Gin\Foundation\Config` class provides a simple way for creating flexi
 
 Pass an array of options on class initialization.
 
-<pre class="pre"><code class="language-php">use Tonik\Gin\Foundation\Config;
+```php
+use Tonik\Gin\Foundation\Config;
 
 $config = new Config(['textdomain' => 'theme-textdomain']);
 
-// $config: class Tonik\Gin\Foundation\Config()</code></pre>
+// $config: class Tonik\Gin\Foundation\Config()
+```
 
 #### Getting all configuration values as an array
 
 If you want to get a standard array with your configuration options, call `all` method or directly cast config variable to an array.
 
-<pre class="pre"><code class="language-php">$config->all();
+```php
+$config->all();
 (array) $config;
 
-// ['textdomain' => 'theme-textdomain']</code></pre>
+// ['textdomain' => 'theme-textdomain']
+```
 
 #### Getting single configuration values
 
 You can get a single configuration value with `get` method and option name as the argument.
 
-<pre class="pre"><code class="language-php">$config->get('textdomain');
+```php
+$config->get('textdomain');
 $config['textdomain'];
 
-// 'theme-textdomain'</code></pre>
+// 'theme-textdomain'
+```
 
 #### Setting single configuration values
 
 You may also set configuration options after creating. Run `set` method with the option name to update as a first argument and new value as second.
 
-<pre class="pre"><code class="language-php">$config->set('textdomain', 'new-textdomain');
+```php
+$config->set('textdomain', 'new-textdomain');
 $config['textdomain'] = 'new-textdomain';
 
-// ['textdomain' => 'new-textdomain']</code></pre>
+// ['textdomain' => 'new-textdomain']
+```
 
 #### Checking whether there an entry in configuration
 
 The `has` method verifies if an option exists in the configuration.
 
-<pre class="pre"><code class="language-php">$config->has('textdomain');   // true
+```php
+$config->has('textdomain');   // true
 $config->has('missing');      // false
 
 isset($config['textdomain']); // true
-isset($config['missing']);    // false</code></pre>
+isset($config['missing']);    // false
+```
 
 ## Filters
 
@@ -61,14 +71,18 @@ isset($config['missing']);    // false</code></pre>
 
 Allows for modifying a configuration value of the specific option on getting.
 
-<pre class="pre"><code class="language-php">add_filter('tonik/gin/config/get/key', function($value) {
+```php
+add_filter('tonik/gin/config/get/key', function($value) {
     return ucfirst($value);
-});</code></pre>
+});
+```
 
 #### `tonik/gin/config/set/{option}`
 
 Allows for modifying a configuration value of the specific option when setting.
 
-<pre class="pre"><code class="language-php">add_filter('tonik/gin/config/set/key', function($value) {
+```php
+add_filter('tonik/gin/config/set/key', function($value) {
     return ucfirst($value);
-});</code></pre>
+});
+```

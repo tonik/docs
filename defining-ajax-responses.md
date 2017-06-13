@@ -15,7 +15,8 @@ Your ajax listeners should be registered inside `app/Http/ajaxes.php` file.
 
 Your scripts need to know an URL endpoint, where they can reach your registered actions. Start with providing an Admin AJAX URL, by localizing your script with data. Use `admin_url()` function to pull URL for AJAX calls.
 
-<pre class="pre"><code class="language-php">wp_register_script('script-ajax', asset_path('js/script-ajax.js'), ['jquery'], null, true);
+```php
+wp_register_script('script-ajax', asset_path('js/script-ajax.js'), ['jquery'], null, true);
 
 wp_localize_script('script-ajax', 'Ajax', [
     'ajax' => [
@@ -23,13 +24,15 @@ wp_localize_script('script-ajax', 'Ajax', [
     ],
 ]);
 
-wp_enqueue_script('script-ajax');</code></pre>
+wp_enqueue_script('script-ajax');
+```
 
 ### 2. Listen for action
 
 Register listener for your AJAX action.
 
-<pre class="pre"><code class="language-php">namespace App\Theme\Http;
+```php
+namespace App\Theme\Http;
 
 function handle_ajax_action()
 {
@@ -38,13 +41,15 @@ function handle_ajax_action()
     die();
 }
 add_action('wp_ajax_my_action', 'App\Theme\Http\handle_ajax_action');
-add_action('wp_ajax_nopriv_my_action', 'App\Theme\Http\handle_ajax_action');</code></pre>
+add_action('wp_ajax_nopriv_my_action', 'App\Theme\Http\handle_ajax_action');
+```
 
 ### 3. Calling actions from JavaScript
 
 As an example, we will use $.ajax() to perform an asynchronous HTTP request to our action endpoint.
 
-<pre class="pre"><code class="language-javascript">$.ajax({
+```js
+$.ajax({
     url: Ajax.url,
     dataType: 'json',
     data: {
@@ -52,4 +57,5 @@ As an example, we will use $.ajax() to perform an asynchronous HTTP request to o
     }
 }).done(function(data, status, response) {
     // Callback
-});</code></pre>
+});
+```

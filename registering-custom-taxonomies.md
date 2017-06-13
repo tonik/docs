@@ -9,7 +9,8 @@ Taxonomy allows for classifying your posts in groups. They should be registered 
 
 Starter registers `book_genre` taxonomy as an example. Customize it to your needs.
 
-<pre class="pre"><code class="language-php">namespace App\Theme\Structure;
+```php
+namespace App\Theme\Structure;
 
 function register_book_genre_taxonomy()
 {
@@ -23,4 +24,5 @@ function register_book_genre_taxonomy()
         'public' => true,
     ]);
 }
-add_action('init', 'App\Theme\Structure\register_book_genre_taxonomy');</code></pre>
+add_action('init', 'App\Theme\Structure\register_book_genre_taxonomy');
+```

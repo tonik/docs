@@ -11,7 +11,8 @@ Theme supports have to be registered inside `app/Setup/supports.php` file on `af
 
 Simply call `add_theme_support()` function with choosen option inside hooked function.
 
-<pre class="pre"><code class="language-php">namespace App\Theme\Setup;
+```php
+namespace App\Theme\Setup;
 
 use function App\Theme\config;
 
@@ -19,4 +20,5 @@ function add_theme_supports()
 {
     add_theme_support('post-thumbnails');
 }
-add_action('after_setup_theme', 'App\Theme\Setup\add_theme_supports');</code></pre>
+add_action('after_setup_theme', 'App\Theme\Setup\add_theme_supports');
+```

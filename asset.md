@@ -12,7 +12,8 @@ The `Tonik\Gin\Asset\Asset` class provides simple API for retrieving information
 
 Asset requires the `Tonik\Gin\Foundation\Config` class to be injected with `paths` and `directories` properties set up.
 
-<pre class="pre"><code class="language-php">use Tonik\Gin\Asset\Asset;
+```php
+use Tonik\Gin\Asset\Asset;
 use Tonik\Gin\Foundation\Config;
 
 $config = new Config([
@@ -26,40 +27,51 @@ $config = new Config([
     ]
 ]);
 
-$asset = new Asset($config);</code></pre>
+$asset = new Asset($config);
+```
 
 Now, you can set a path to the file you are looking for. This path should be relative to the `public` directory.
 
-<pre class="pre"><code class="language-php">$asset->setFile('js/app.js');</code></pre>
+```php
+$asset->setFile('js/app.js');
+```
 
 #### Getting asset relative path
 
 Gets asset path relatively to the project root directory.
 
-<pre class="pre"><code class="language-php">$asset->getRelativePath();
+```php
+$asset->getRelativePath();
 
-// 'public/js/app.js'</code></pre>
+// 'public/js/app.js'
+```
 
 #### Getting asset URI
 
 Gets URI to the asset on your server.
 
-<pre class="pre"><code class="language-php">$asset->getUri();
+```php
+$asset->getUri();
 
-// 'http://website.com/wp-content/themes/<theme-name>/public/js/app.js'</code></pre>
+// 'http://website.com/wp-content/themes/<theme-name>/public/js/app.js'
+```
 
 #### Getting asset path
 
 Gets full directory path to the asset on your server.
 
-<pre class="pre"><code class="language-php">$asset->getPath();
+```php
+$asset->getPath();
 
-// 'website/directory/wp-content/themes/<theme-name>/public/js/app.js'</code></pre>
+// 'website/directory/wp-content/themes/<theme-name>/public/js/app.js'
+```
 
 #### Checking if asset file exist
 
 You can check if asset file actually exists with `fileExist` method.
 
-<pre class="pre"><code class="language-php">$asset->fileExists();
+```php
+$asset->fileExists();
 
-// true or false</code></pre>
+// true or false
+```
