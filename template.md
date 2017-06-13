@@ -67,7 +67,7 @@ Of course, you can pass various data to the template with an associative array a
 
 <pre class="pre"><code class="language-html"><!-- @ resources/templates/content.tpl.php -->
 <main><?= $title =></main></code></pre>
-<pre class="pre"><code class="language-php">$template->render(['text' => 'Lorem ipsum.']);</code></html>
+<pre class="pre"><code class="language-php">$template->render(['text' => 'Lorem ipsum.']);</code></pre>
 
 ## Filters
 
