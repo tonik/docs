@@ -2,7 +2,7 @@
 extends: docs
 title: "Using service container"
 group: "Basics"
-section: "Setup"
+subgroup: "Setup"
 ---
 
 The starter introduces really simple but very helpful service container for better organization and separation of your code. Let's quote some definition:

@@ -2,7 +2,7 @@
 extends: docs
 title: "Registering custom taxonomies"
 group: "Basics"
-section: "Structure"
+subgroup: "Structure"
 ---
 
 Taxonomy allows for classifying your posts in groups. They should be registered inside `app/Structure/taxonomies.php` file within `init` action.

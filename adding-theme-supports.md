@@ -2,7 +2,7 @@
 extends: docs
 title: "Adding theme supports"
 group: "Basics"
-section: "Setup"
+subgroup: "Setup"
 ---
 
 Theme supports have to be registered inside `app/Setup/supports.php` file on `after_setup_theme` action hook. Most common supports are already enabled. However, feel free to add or remove entries there.

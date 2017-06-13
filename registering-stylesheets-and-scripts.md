@@ -2,7 +2,7 @@
 extends: docs
 title: "Registering stylesheets and scripts"
 group: "Basics"
-section: "Http"
+subgroup: "Http"
 ---
 
 Inside your theme's `config/app.js` you will find `assets` property. It holds a list of file paths which will be processed by the builder and outputted to the `public` directory.

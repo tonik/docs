@@ -2,7 +2,7 @@
 extends: docs
 title: "Handling translations"
 group: "Basics"
-section: "Setup"
+subgroup: "Setup"
 ---
 
 It is better to make your theme multilanguage ready. To help you with that starter comes preconfigured and ready for translating.

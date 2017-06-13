@@ -2,7 +2,7 @@
 extends: docs
 title: "Theme actions"
 group: "Basics"
-section: "Setup"
+subgroup: "Setup"
 ---
 
 Actions allow you to trigger various logic at the specific moments and places when executing your application. They should be registered inside `app/Setup/actions.php` file.

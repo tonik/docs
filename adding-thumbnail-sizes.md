@@ -2,7 +2,7 @@
 extends: docs
 title: "Adding thumbnail sizes"
 group: "Basics"
-section: "Structure"
+subgroup: "Structure"
 ---
 
 Registering own thumbnails allows for creating additional images sizes, beyond those shipped with WordPress. Your new image sizes should be registered inside `app/Setup/thumbnails.php` file with `add_image_size` function within `after_setup_theme` action hook.

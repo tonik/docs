@@ -2,7 +2,7 @@
 extends: docs
 title: "Registering custom post types"
 group: "Basics"
-section: "Structure"
+subgroup: "Structure"
 ---
 
 Post types allow you to easily create and manage various content structures. They should be registered inside `app/Structure/posttypes.php` file within `init` action.
