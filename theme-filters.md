@@ -8,9 +8,9 @@ next: adding-theme-supports
 order: 2
 ---
 
-Filters can change an output or behavior of different parts of your theme or WordPress. They should be defined inside `app/Setup/filters.php` file.
+Filters can change an output or behavior of different parts of your theme or WordPress.
 
-Inside you can see a standard example of modifying the length of the excerpt.
+They should be defined inside `app/Setup/filters.php` file. Inside you can see a standard example of modifying the length of the excerpt.
 
 ```php
 namespace App\Theme\Setup;
