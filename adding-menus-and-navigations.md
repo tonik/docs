@@ -4,7 +4,7 @@ title: "Adding menus and navigations"
 group: "Basics"
 subgroup: "Structure"
 prev: registering-custom-taxonomies
-next: adding-thumbnails-sizes
+next: adding-thumbnail-sizes
 order: 3
 ---
 
