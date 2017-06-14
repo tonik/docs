@@ -11,7 +11,7 @@ order: 1
 This starter theme introduces "easy to follow" folder structure, which enforces to divide your theme logic into separate files. For quick overview take a look at the structure tree bellow.
 
 ```
-theme                               # — Root of your theme
+theme                              # — Root of your theme
    ├── app/                        # — Theme application logic
    │   ├── Http/                   # — Http layer of theme
    │   │   ├── ajaxes.php          # — Theme ajaxes endpoints
@@ -56,23 +56,23 @@ theme                               # — Root of your theme
    ├── style.css                   # — Theme details information (don't write any CSS in here)
 ```
 
-### `app/`
+#### `app/`
 
 General folder for components of your theme. All of the autoloaded files of your theme will be stored in this directory. Folder structure inside is not strict, feel free to adjust it to your preferences.
 
-### `bootstrap/`
+#### `bootstrap/`
 
 This directory contains all files which are called when a theme is bootstrapped. They look for required dependencies and initializing theme itself. You probably do not need to change anything here.
 
-### `build/`
+#### `build/`
 
 Includes all procedures of theme builder i.e. Webpack configuration and rules files which determines how theme's front-end is compiled.
 
-### `config/`
+#### `config/`
 
 The `config` directory stores all of your theme's configuration files. You will find here configurations for both theme and builder.
 
-### `resources/`
+#### `resources/`
 
 The resources directory includes your templates as well as un-compiled assets like SASS, or JavaScript. You will also find here language files.
 
@@ -83,6 +83,6 @@ The resources directory includes your templates as well as un-compiled assets li
 - `templates/` - `.tpl.php` template files
 - `languages/` - `.po` and `.mo` translation files
 
-### `public/`
+#### `public/`
 
 This directory contains all your compiled and optimized assets such as images, scripts, and stylesheets. It is important to remember that this directory is removed entirely before each build, so you should not make changes in files inside this folder.
