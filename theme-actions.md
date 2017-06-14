@@ -8,9 +8,9 @@ next: theme-filters
 order: 1
 ---
 
-Actions allow you to trigger various logic at the specific moments and places when executing your application. They should be registered inside `app/Setup/actions.php` file.
+Actions allow you to trigger various logic at the specific moments and places when executing your application.
 
-As a simple example, let's output `Hello World` to the footer.
+They should be registered inside `app/Setup/actions.php` file. As a simple example, let's output `Hello World` to the footer.
 
 ```php
 namespace App\Theme\Setup;
