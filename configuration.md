@@ -48,7 +48,7 @@ Standard theme stylesheet file. Defines all details about the theme displayed in
 
 Configuration for theme structure paths, files to autoload and other settings of core functionalities. Each option has a short description to let you know about the usage.
 
-> You can easily access these configuration values using the global `config` helper function. Read about this in [Helper functions]() documentation.
+> You can easily access these configuration values using the global `config` helper function. Read about this in [Helper functions](/docs/helper-functions/) documentation.
 
 #### `config/app.json`
 
