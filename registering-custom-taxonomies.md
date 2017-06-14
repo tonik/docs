@@ -8,9 +8,9 @@ next: adding-menus-and-navigations
 order: 2
 ---
 
-Taxonomy allows for classifying your posts in groups. They should be registered inside `app/Structure/taxonomies.php` file within `init` action.
+Taxonomy allows for classifying your posts in groups.
 
-Starter registers `book_genre` taxonomy as an example. Customize it to your needs.
+They should be registered inside `app/Structure/taxonomies.php` file within `init` action. Starter registers `book_genre` taxonomy as an example. Customize it to your needs.
 
 ```php
 namespace App\Theme\Structure;
