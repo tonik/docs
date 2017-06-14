@@ -8,9 +8,9 @@ next: registering-custom-taxonomies
 order: 1
 ---
 
-Post types allow you to easily create and manage various content structures. They should be registered inside `app/Structure/posttypes.php` file within `init` action.
+Post types allow you to easily create and manage various content structures.
 
-Starter registers `book` post type as an example. Customize it to your needs.
+They should be registered inside `app/Structure/posttypes.php` file within `init` action. Starter registers `book` post type as an example. Customize it to your needs.
 
 ```php
 namespace App\Theme\Structure;
