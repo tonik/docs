@@ -8,6 +8,8 @@ next: defining-ajax-responses
 order: 1
 ---
 
+## Workflow
+
 Inside your theme's `config/app.js` you will find `assets` property. It holds a list of file paths which will be processed by the builder and outputted to the `public` directory.
 
 As you can see, by default, we already building main stylesheets and scripts of theme and framework.
