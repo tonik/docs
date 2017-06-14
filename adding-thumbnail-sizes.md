@@ -8,7 +8,9 @@ next: registering-sidebars
 order: 4
 ---
 
-Registering own thumbnails allows for creating additional images sizes, beyond those shipped with WordPress. Your new image sizes should be registered inside `app/Setup/thumbnails.php` file with `add_image_size` function within `after_setup_theme` action hook.
+Registering own thumbnails allows for creating additional images sizes, beyond those shipped with WordPress.
+
+Your new image sizes should be registered inside `app/Setup/thumbnails.php` file with `add_image_size` function within `after_setup_theme` action hook.
 
 ```php
 namespace App\Theme\Structure;
