@@ -13,7 +13,7 @@ By default template files are stored inside `resources/templates` directory. You
 
 ```php
 'directories' => [
-    'templates' => 'resources/templates'
+  'templates' => 'resources/templates'
 ]
 ```
 
@@ -21,7 +21,7 @@ You may also customize extension of template files. By default, it is `.tpl.php`
 
 ```php
 'templates' => [
-    'extension' => '.tpl.php'
+  'extension' => '.tpl.php'
 ]
 ```
 
@@ -61,11 +61,11 @@ Start with creating a template view for a single post. It is a standard loop wit
 <!-- @ resources/templates/single.tpl.php -->
 
 <?php if (have_posts()) : ?>
-    <main>
-        <?php while (have_posts()) : the_post() ?>
-            <?php do_action('theme/single/content') ?>
-        <?php endwhile ?>
-    </main>
+  <main>
+    <?php while (have_posts()) : the_post() ?>
+      <?php do_action('theme/single/content') ?>
+    <?php endwhile ?>
+  </main>
 <?php endif ?>
 ```
 
@@ -85,11 +85,11 @@ We can proceed and create a view file for a post content.
 <!-- @ resources/templates/partials/content.tpl.php -->
 
 <article>
-    <header>
-        <h1><?php the_title() ?></h1>
-    </header>
+  <header>
+    <h1><?php the_title() ?></h1>
+  </header>
 
-    <p><?php the_content() ?></p>
+  <p><?php the_content() ?></p>
 </article>
 ```
 
@@ -100,7 +100,7 @@ Now, we can hook to a `theme/single/content` action, which are executed inside `
 
 function render_post_content()
 {
-    template('partials/post/content');
+  template('partials/post/content');
 }
 add_action('theme/single/content', 'App\Theme\Setup\render_post_content');
 ```

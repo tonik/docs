@@ -73,7 +73,7 @@ Allows for modifying a configuration value of the specific option on getting.
 
 ```php
 add_filter('tonik/gin/config/get/key', function($value) {
-    return ucfirst($value);
+  return ucfirst($value);
 });
 ```
 
@@ -83,6 +83,6 @@ Allows for modifying a configuration value of the specific option when setting.
 
 ```php
 add_filter('tonik/gin/config/set/key', function($value) {
-    return ucfirst($value);
+  return ucfirst($value);
 });
 ```

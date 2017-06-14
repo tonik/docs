@@ -14,7 +14,7 @@ namespace App\Theme\Setup;
 
 function modify_excerpt_length()
 {
-    return 60;
+  return 60;
 }
 add_filter('excerpt_length', 'App\Theme\Setup\modify_excerpt_length');
 ```
@@ -27,9 +27,9 @@ Controlling sidebar visibility is a great use case for custom filters. Let's sta
 
 ```html
 <?php if (apply_filters('theme/sidebar/visibility', true)): ?>
-    <aside>
-        <?php get_sidebar() ?>
-    </aside>
+  <aside>
+    <?php get_sidebar() ?>
+  </aside>
 <?php endif ?>
 ```
 
@@ -40,13 +40,13 @@ namespace App\Theme\Setup;
 
 function display_sidebar($status)
 {
-    $conditions = [is_404(), is_page()];
+  $conditions = [is_404(), is_page()];
 
-    if (in_array(true, $conditions)) {
-        return false;
-    }
+  if (in_array(true, $conditions)) {
+    return false;
+  }
 
-    return $status;
+  return $status;
 }
 add_filter('theme/sidebar/visibility', 'App\Theme\Setup\display_sidebar');
 ```

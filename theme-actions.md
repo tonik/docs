@@ -14,7 +14,7 @@ namespace App\Theme\Setup;
 
 function render_text()
 {
-    echo "Hello world!";
+  echo "Hello world!";
 }
 add_action('wp_footer', 'App\Theme\Setup\render_text');
 ```
@@ -29,7 +29,7 @@ Start with making a `single.tpl.php` post template with side content, but instea
 <!-- @ resources/templates/single.tpl.php -->
 
 <aside>
-    <?php do_action('theme/single/sidebar') ?>
+  <?php do_action('theme/single/sidebar') ?>
 </aside>
 ```
 
@@ -39,10 +39,10 @@ Next, create the `sidebar.tpl.php` where you will output specified sidebar with 
 <!-- @ resources/templates/partials/sidebar.tpl.php -->
 
 <?php if (is_active_sidebar('sidebar')) : ?>
-    <?php dynamic_sidebar('sidebar') ?>
+  <?php dynamic_sidebar('sidebar') ?>
 <?php else: ?>
-    <h5>Sidebar</h5>
-    <p>Your sidebar is empty.</p>
+  <h5>Sidebar</h5>
+  <p>Your sidebar is empty.</p>
 <?php endif; ?>
 ```
 
@@ -67,7 +67,7 @@ namespace App\Theme\Setup;
 
 function render_sidebar()
 {
-    get_sidebar();
+  get_sidebar();
 }
 add_action('theme/single/sidebar', 'App\Theme\Setup\render_sidebar');
 ```

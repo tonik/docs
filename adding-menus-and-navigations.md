@@ -16,9 +16,9 @@ use function App\Theme\config;
 
 function register_navigation_areas()
 {
-    register_nav_menus([
-        'primary' => __('Primary', config('textdomain')),
-    ]);
+  register_nav_menus([
+    'primary' => __('Primary', config('textdomain')),
+  ]);
 }
 add_action('after_setup_theme', 'App\Theme\Structure\register_navigation_areas');
 ```
@@ -32,10 +32,10 @@ use function App\Theme\config;
 
 function register_navigation_areas()
 {
-    register_nav_menus([
-        'primary' => __('Primary', config('textdomain')),
-        'secondary' => __('Secondary', config('textdomain')),
-    ]);
+  register_nav_menus([
+    'primary' => __('Primary', config('textdomain')),
+    'secondary' => __('Secondary', config('textdomain')),
+  ]);
 }
 add_action('after_setup_theme', 'App\Theme\Structure\register_navigation_areas');
 ```
@@ -46,6 +46,6 @@ Use `wp_nav_menu` to output menu assigned to previously registered navigation ar
 
 ```php
 wp_nav_menu([
-    'theme_location' => 'secondary'
+  'theme_location' => 'secondary'
 ]);
 ```

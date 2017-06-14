@@ -16,11 +16,11 @@ use function App\Theme\config;
 
 function register_book_post_type()
 {
-    register_post_type('book', [
-        'description' => __('Collection of books.', config('textdomain')),
-        'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
-        'public' => true,
-    ]);
+  register_post_type('book', [
+    'description' => __('Collection of books.', config('textdomain')),
+    'supports' => ['title', 'editor', 'excerpt', 'thumbnail'],
+    'public' => true,
+  ]);
 }
 add_action('init', 'App\Theme\Structure\register_book_post_type');
 ```

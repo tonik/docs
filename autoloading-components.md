@@ -17,20 +17,20 @@ You can register components in the `config/app.php` configuration file with `aut
 
 ```php
 'autoload' => [
-    'helpers.php',
-    'Structure/navs.php',
-    'Structure/widgets.php',
-    'Structure/sidebars.php',
-    'Structure/posttypes.php',
-    'Structure/taxonomies.php',
-    'Structure/shortcodes.php',
-    'Structure/thumbnails.php',
-    'Setup/actions.php',
-    'Setup/filters.php',
-    'Setup/supports.php',
-    'Setup/services.php',
-    'Http/assets.php',
-    'Http/ajaxes.php',
+  'helpers.php',
+  'Structure/navs.php',
+  'Structure/widgets.php',
+  'Structure/sidebars.php',
+  'Structure/posttypes.php',
+  'Structure/taxonomies.php',
+  'Structure/shortcodes.php',
+  'Structure/thumbnails.php',
+  'Setup/actions.php',
+  'Setup/filters.php',
+  'Setup/supports.php',
+  'Setup/services.php',
+  'Http/assets.php',
+  'Http/ajaxes.php',
 ]
 ```
 
@@ -42,8 +42,8 @@ In order to autoload your own new component, add a new entry to the `autoload` l
 
 ```php
 'autoload' => [
-    //...
-    'Structure/settings.php',
-    //...
+  //...
+  'Structure/settings.php',
+  //...
 ]
 ```

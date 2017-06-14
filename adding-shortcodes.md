@@ -20,8 +20,8 @@ namespace App\Theme\Structure;
 
 function render_shortcode($atts, $content)
 {
-    // $atts: ['attr' => 'attribute']
-    // $content: 'Content'
+  // $atts: ['attr' => 'attribute']
+  // $content: 'Content'
 }
 add_shortcode('shortcode', 'App\Theme\Structure\render_shortcode');
 ```
@@ -39,15 +39,15 @@ namespace App\Theme\Structure;
 
 function render_button_shortcode($atts, $content)
 {
-    $attributes = shortcode_atts([
-        'href' => '#'
-    ], $atts);
+  $attributes = shortcode_atts([
+    'href' => '#'
+  ], $atts);
 
-    ob_start();
+  ob_start();
 
-    template('shortcodes/button', compact('attributes', 'content'));
+  template('shortcodes/button', compact('attributes', 'content'));
 
-    return ob_get_clean();
+  return ob_get_clean();
 }
 add_shortcode('button', 'App\Theme\Structure\render_button_shortcode');
 ```

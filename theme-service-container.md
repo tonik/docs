@@ -22,7 +22,7 @@ To bind a value inside container simply call `bind` or `factory` method with a b
 
 ```php
 $theme->bind('basic', function() {
-    return 'value';
+  return 'value';
 });
 ```
 
@@ -30,8 +30,8 @@ Inside closure callback, you have access to the two parameters. First is an inst
 
 ```php
 $theme->bind('basic/parameters', function(Theme $theme, $parameters) {
-    // $theme: class Tonik\Gin\Foundation\Theme
-    // $parameters: ['key' => 'value']
+  // $theme: class Tonik\Gin\Foundation\Theme
+  // $parameters: ['key' => 'value']
 });
 
 // Resolve service with parameter.
@@ -46,7 +46,7 @@ Use `bind` method to create singleton service. You will receive the same instanc
 use Tonik\Gin\Foundation\Config;
 
 $theme->bind('singleton', function() {
-    return new Config(['option' => 'value']);
+  return new Config(['option' => 'value']);
 });
 ```
 
@@ -56,7 +56,7 @@ The `factory` method allows you to create service which returns you a new instan
 
 ```php
 $theme->factory('service', function () {
-    return new Config(['option' => 'value']);
+  return new Config(['option' => 'value']);
 });
 ```
 

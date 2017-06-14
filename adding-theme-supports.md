@@ -18,7 +18,7 @@ use function App\Theme\config;
 
 function add_theme_supports()
 {
-    add_theme_support('post-thumbnails');
+  add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'App\Theme\Setup\add_theme_supports');
 ```

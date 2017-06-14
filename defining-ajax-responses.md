@@ -19,9 +19,9 @@ Your scripts need to know an URL endpoint, where they can reach your registered 
 wp_register_script('script-ajax', asset_path('js/script-ajax.js'), ['jquery'], null, true);
 
 wp_localize_script('script-ajax', 'Ajax', [
-    'ajax' => [
-        'url' => admin_url('admin-ajax.php')
-    ],
+  'ajax' => [
+    'url' => admin_url('admin-ajax.php')
+  ],
 ]);
 
 wp_enqueue_script('script-ajax');
@@ -36,9 +36,9 @@ namespace App\Theme\Http;
 
 function handle_ajax_action()
 {
-    // Action logic...
+  // Action logic...
 
-    die();
+  die();
 }
 add_action('wp_ajax_my_action', 'App\Theme\Http\handle_ajax_action');
 add_action('wp_ajax_nopriv_my_action', 'App\Theme\Http\handle_ajax_action');
@@ -50,12 +50,12 @@ As an example, we will use $.ajax() to perform an asynchronous HTTP request to o
 
 ```js
 $.ajax({
-    url: Ajax.url,
-    dataType: 'json',
-    data: {
-        action: 'my_action' // Your AJAX action name
-    }
+  url: Ajax.url,
+  dataType: 'json',
+  data: {
+    action: 'my_action' // Your AJAX action name
+  }
 }).done(function(data, status, response) {
-    // Callback
+  // Callback
 });
 ```

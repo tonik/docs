@@ -32,9 +32,9 @@ use function App\Theme\theme;
 
 function bind_service()
 {
-    theme()->bind('service', function() {
-        return true;
-    });
+  theme()->bind('service', function() {
+    return true;
+  });
 }
 add_action('init', 'App\Theme\Setup\bind_service');
 ```
@@ -68,17 +68,17 @@ use Tonik\Gin\Foundation\Theme;
  */
 function bind_genres_of_book_service()
 {
-    /**
-     * Binds service for retrieving genre of the specific book.
-     *
-     * @param \Tonik\Gin\Foundation\Theme $theme  Instance of the service container
-     * @param array $parameters  Parameters passed on service resolving
-     *
-     * @return \WP_term[]
-     */
-    theme()->bind('book/genres', function (Theme $theme, $parameters) {
-        return wp_get_post_terms($parameters['id'], 'book_grene');
-    });
+  /**
+   * Binds service for retrieving genre of the specific book.
+   *
+   * @param \Tonik\Gin\Foundation\Theme $theme  Instance of the service container
+   * @param array $parameters  Parameters passed on service resolving
+   *
+   * @return \WP_term[]
+   */
+  theme()->bind('book/genres', function (Theme $theme, $parameters) {
+    return wp_get_post_terms($parameters['id'], 'book_grene');
+  });
 }
 add_action('init', 'App\Theme\Setup\bind_genres_of_book_service');
 ```
@@ -105,25 +105,25 @@ use function App\Theme\theme;
  */
 function bind_api_authorize_service()
 {
-    /**
-     * Binds service for retrieving authorization token for API.
-     *
-     * @return array
-     */
-    theme()->bind('api/endpoint', function () {
-        if (false === ($response = get_transient('api/endpoint/response/transient'))) {
-            $response = wp_remote_post("https://api.io/endpoint", [
-                'body' => [
-                    'client_id'  => CLIENT_ID,
-                    'secret_key' => SECRET_KEY
-                ]
-            ]);
+  /**
+   * Binds service for retrieving authorization token for API.
+   *
+   * @return array
+   */
+  theme()->bind('api/endpoint', function () {
+    if (false === ($response = get_transient('api/endpoint/response/transient'))) {
+      $response = wp_remote_post("https://api.io/endpoint", [
+        'body' => [
+          'client_id'  => CLIENT_ID,
+          'secret_key' => SECRET_KEY
+        ]
+      ]);
 
-            set_transient('api/endpoint/response/transient', $response, DAY_IN_SECONDS);
-        }
+      set_transient('api/endpoint/response/transient', $response, DAY_IN_SECONDS);
+    }
 
-        return json_decode($response['body']);
-    });
+    return json_decode($response['body']);
+  });
 }
 add_action('init', 'App\Theme\Setup\bind_api_authorize_service');
 ```

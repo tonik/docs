@@ -14,15 +14,15 @@ namespace App\Theme\Structure;
 
 function register_book_genre_taxonomy()
 {
-    register_taxonomy('book_genre', 'book', [
-        'rewrite' => [
-            'slug' => 'books/genre',
-            'with_front' => true,
-            'hierarchical' => true,
-        ],
-        'hierarchical' => true,
-        'public' => true,
-    ]);
+  register_taxonomy('book_genre', 'book', [
+    'rewrite' => [
+      'slug' => 'books/genre',
+      'with_front' => true,
+      'hierarchical' => true,
+    ],
+    'hierarchical' => true,
+    'public' => true,
+  ]);
 }
 add_action('init', 'App\Theme\Structure\register_book_genre_taxonomy');
 ```

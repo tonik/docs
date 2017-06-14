@@ -17,15 +17,15 @@ use Tonik\Gin\Foundation\Config;
 use Tonik\Gin\Foundation\Autoloader;
 
 $config = new Config([
-    'paths' => [
-        'directory' => get_template_directory(),
-    ],
-    'directories' => [
-        'app' => 'app',
-    ],
-    'autoload' => [
-        'Http/assets.php',
-    ]
+  'paths' => [
+    'directory' => get_template_directory(),
+  ],
+  'directories' => [
+    'app' => 'app',
+  ],
+  'autoload' => [
+    'Http/assets.php',
+  ]
 ]);
 
 $autoloader = new Autoloader($config);

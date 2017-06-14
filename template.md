@@ -17,15 +17,15 @@ use Tonik\Gin\Template\Template;
 use Tonik\Gin\Foundation\Config;
 
 $config = new Config([
-    'templates' => [
-        'extension' => '.tpl.php'
-    ],
-    'paths' => [
-        'directory' => get_template_directory(),
-    ],
-    'directories' => [
-        'templates' => 'resources/templates'
-    ]
+  'templates' => [
+    'extension' => '.tpl.php'
+  ],
+  'paths' => [
+    'directory' => get_template_directory(),
+  ],
+  'directories' => [
+    'templates' => 'resources/templates'
+  ]
 ]);
 
 $template = new Template($config);
@@ -96,9 +96,9 @@ Allows for changing filenames of templates on rendering run.
 
 ```php
 add_filter('tonik/gin/template/filename', function($name) {
-    if ($name === 'button.php') {
-       return 'button-changed.php';
-    }
+  if ($name === 'button.php') {
+     return 'button-changed.php';
+  }
 });
 ```
 
@@ -108,8 +108,8 @@ Filter for changing values of passed context of a specified template on renderin
 
 ```php
 add_filter('tonik/gin/template/context/button.php', function($context) {
-    $context['title'] = 'New title!';
+  $context['title'] = 'New title!';
 
-    return $context;
+  return $context;
 });
 ```

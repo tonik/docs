@@ -65,12 +65,12 @@ Your assets should be enqueued inside `app/Http/assets.php` file in `register_st
  * @return void
  */
 function register_stylesheets() {
-    wp_enqueue_style('foundation', asset_path('css/foundation.css'));
-    wp_enqueue_style('app', asset_path('css/app.css'));
+  wp_enqueue_style('foundation', asset_path('css/foundation.css'));
+  wp_enqueue_style('app', asset_path('css/app.css'));
 
-    if (is_page('shops')) {
-        wp_enqueue_style('shop-finder', asset_path('css/shop-finder.css'));
-    }
+  if (is_page('shops')) {
+    wp_enqueue_style('shop-finder', asset_path('css/shop-finder.css'));
+  }
 }
 add_action('wp_enqueue_scripts', 'App\Theme\Http\register_stylesheets');
 ```
@@ -82,12 +82,12 @@ add_action('wp_enqueue_scripts', 'App\Theme\Http\register_stylesheets');
  * @return void
  */
 function register_scripts() {
-    wp_enqueue_script('foundation', asset_path('js/foundation.js'), ['jquery'], null, true);
-    wp_enqueue_script('app', asset_path('js/app.js'), ['foundation'], null, true);
+  wp_enqueue_script('foundation', asset_path('js/foundation.js'), ['jquery'], null, true);
+  wp_enqueue_script('app', asset_path('js/app.js'), ['foundation'], null, true);
 
-    if (is_page('shops')) {
-        wp_enqueue_script('shop-finder', asset_path('js/shop-finder.js'), ['jquery'], null, true);
-    }
+  if (is_page('shops')) {
+    wp_enqueue_script('shop-finder', asset_path('js/shop-finder.js'), ['jquery'], null, true);
+  }
 }
 add_action('wp_enqueue_scripts', 'App\Theme\Http\register_scripts');
 ```

@@ -12,19 +12,19 @@ Advanced Custom Fields initiation files may be easily blended into a current fol
 
 ```
 theme
-    ├── app/
-    │   ├── Structure/
-    │   │   ├── ACF/                # — Directory for ACF components
-    │   │   │   ├── settings.php    # — Theme settings page configuration file
+  ├── app/
+  │   ├── Structure/
+  │   │   ├── ACF/                # — Directory for ACF components
+  │   │   │   ├── settings.php    # — Theme settings page configuration file
 ```
 
 Remember to add a file path of the new component to autoload list inside a configuration file.
 
 ```php
 'autoload' => [
-    //...
-    'Structure/ACF/settings.php',
-    //...
+  //...
+  'Structure/ACF/settings.php',
+  //...
 ]
 ```
 
@@ -40,10 +40,10 @@ namespace App\Theme\Structure\ACF;
 use function App\Theme\config;
 
 acf_add_options_page([
-    'page_title' => __('Theme Settings', config('textdomain')),
-    'menu_title' => __('Theme Settings', config('textdomain')),
-    'menu_slug' => 'theme-settings',
-    'capability' => 'edit_posts',
-    'redirect' => false
+  'page_title' => __('Theme Settings', config('textdomain')),
+  'menu_title' => __('Theme Settings', config('textdomain')),
+  'menu_slug' => 'theme-settings',
+  'capability' => 'edit_posts',
+  'redirect' => false
 ]);
 ```

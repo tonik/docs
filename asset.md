@@ -17,14 +17,14 @@ use Tonik\Gin\Asset\Asset;
 use Tonik\Gin\Foundation\Config;
 
 $config = new Config([
-    'paths' => [
-        'directory' => get_template_directory(),
-        'uri' => get_template_directory_uri(),
-    ],
-    'directories' => [
-        'assets' => 'resources/assets',
-        'public' => 'public',
-    ]
+  'paths' => [
+    'directory' => get_template_directory(),
+    'uri' => get_template_directory_uri(),
+  ],
+  'directories' => [
+    'assets' => 'resources/assets',
+    'public' => 'public',
+  ]
 ]);
 
 $asset = new Asset($config);
