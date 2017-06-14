@@ -8,9 +8,11 @@ next: handling-translations
 order: 3
 ---
 
+## Configuration
+
 Theme supports have to be registered inside `app/Setup/supports.php` file on `after_setup_theme` action hook. Most common supports are already enabled. However, feel free to add or remove entries there.
 
-> Take a look at [Codex](https://developer.wordpress.org/reference/functions/add_theme_support/#more-information) for all available support options.
+> Take a look at [Codex](//developer.wordpress.org/reference/functions/add_theme_support/#more-information) for all available support options.
 
 Simply call `add_theme_support()` function with choosen option inside hooked function.
 
