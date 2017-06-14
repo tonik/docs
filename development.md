@@ -94,7 +94,8 @@ composer require monolog/monolog
 
 Afterward, it will be available inside every component of the project. Just import package namespaces and use it.
 
-<pre class="pre"><code class="language-php">use Monolog\Logger;
+```
+use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 ```
 
