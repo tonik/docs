@@ -8,9 +8,9 @@ next: adding-thumbnail-sizes
 order: 3
 ---
 
-Navigations allow for creating easily customizable menus areas, which can be managed inside `Appearance > Menus` administration panel. You should register navigations in `app/Structure/navs.php` file with `register_nav_menus` function.
+Navigations allow for creating easily customizable menus areas, which can be managed inside "Appearance > Menus" administration panel.
 
-By default, starter registers the "Primary" navigation.
+You should register navigations in `app/Structure/navs.php` file with `register_nav_menus` function. By default, starter registers the "Primary" navigation.
 
 ```php
 namespace App\Theme\Structure;
