@@ -12,7 +12,7 @@ WordPress gives you an ability to define various AJAX actions, which you can aft
 
 Your ajax listeners should be registered inside `app/Http/ajaxes.php` file.
 
-> Please refer to the [Codex](https://codex.wordpress.org/AJAX_in_Plugins) documentation for comprehensive guides about creating AJAX actions.
+> Please refer to the [Codex](//codex.wordpress.org/AJAX_in_Plugins) documentation for comprehensive guides about creating AJAX actions.
 
 ### 1. Provide Ajax URL for script
 
@@ -49,9 +49,11 @@ add_action('wp_ajax_nopriv_my_action', 'App\Theme\Http\handle_ajax_action');
 
 ### 3. Calling actions from JavaScript
 
-As an example, we will use $.ajax() to perform an asynchronous HTTP request to our action endpoint.
+As an example, we will use `$.ajax()` to perform an asynchronous HTTP request to our action endpoint.
 
 ```js
+import $ from 'jquery'
+
 $.ajax({
   url: Ajax.url,
   dataType: 'json',
@@ -60,5 +62,5 @@ $.ajax({
   }
 }).done(function(data, status, response) {
   // Callback
-});
+})
 ```
