@@ -2,6 +2,9 @@
 extends: docs
 title: "Installation"
 group: "Getting Started"
+prev: introduction
+next: configuration
+order: 2
 ---
 
 Tonik Starter Theme uses [Composer](https://getcomposer.org/) and [NPM](https://www.npmjs.com/) to manage its dependencies. Make sure you have both installed on your machine before using this starter.

@@ -2,7 +2,12 @@
 extends: docs
 title: "Configuration"
 group: "Getting Started"
+prev: installation
+next: development
+order: 3
 ---
+
+## Placeholders
 
 Starter uses special placeholder strings for various theme details and information (like name, description and project textdomain), so you can simply find and replace it with your editor.
 

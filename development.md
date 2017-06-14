@@ -2,6 +2,9 @@
 extends: docs
 title: "Development"
 group: "Getting Started"
+prev: configuration
+next: deployment
+order: 4
 ---
 
 ## Required tools

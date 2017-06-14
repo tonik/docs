@@ -3,6 +3,7 @@ extends: docs
 title: "Introduction"
 group: "Getting Started"
 next: installation
+order: 1
 ---
 
 Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance some aspects of WordPress theme development.

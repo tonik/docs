@@ -2,6 +2,9 @@
 extends: docs
 title: "Deployment"
 group: "Getting Started"
+prev: deployment
+next: directory-structure
+order: 5
 ---
 
 ## Server requirements
