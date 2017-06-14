@@ -167,7 +167,7 @@ As you see, filenames have to use [Webpack placeholders](https://webpack.js.org/
 
 To bypass conflicts with global variables, scripts outputted by Webpack are enclosed inside scope. This force you to say explicitly which external variables you want inside theme scripts.
 
-By default, starter gives you access to the jQuery shipped with WordPress.
+> By default, starter gives you access to the jQuery shipped with WordPress.
 
 ```json
 "externals": {
