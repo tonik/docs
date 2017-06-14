@@ -103,7 +103,7 @@ use function App\Theme\theme;
  *
  * @return void
  */
-function bind_api_authorize_service()
+function bind_api_endpoint_service()
 {
   /**
    * Binds service for retrieving authorization token for API.
@@ -111,7 +111,7 @@ function bind_api_authorize_service()
    * @return array
    */
   theme()->bind('api/endpoint', function () {
-    if (false === ($response = get_transient('api/endpoint/response/transient'))) {
+    if (false === ($response = get_transient('api/endpoint/transient'))) {
       $response = wp_remote_post("https://api.io/endpoint", [
         'body' => [
           'client_id'  => CLIENT_ID,
@@ -119,13 +119,13 @@ function bind_api_authorize_service()
         ]
       ]);
 
-      set_transient('api/endpoint/response/transient', $response, DAY_IN_SECONDS);
+      set_transient('api/endpoint/transient', $response, DAY_IN_SECONDS);
     }
 
     return json_decode($response['body']);
   });
 }
-add_action('init', 'App\Theme\Setup\bind_api_authorize_service');
+add_action('init', 'App\Theme\Setup\bind_api_endpoint_service');
 ```
 
 You should define APIs configuration keys as constants in the `wp-config.php` file.
@@ -135,8 +135,8 @@ define('CLIENT_ID', 'client-id');
 define('SECRET_KEY', 'secret-key');
 ```
 
-Now, with a simple resolving, you can pull all external API authorization data.
+Now, with a simple resolving, you can pull external API data.
 
 ```php
-$auth = theme('api/auth');
+$auth = theme('api/endpoint');
 ```
