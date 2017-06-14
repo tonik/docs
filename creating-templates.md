@@ -30,7 +30,7 @@ You may also customize extension of template files. By default, it is `.tpl.php`
 
 ## Usage
 
-It is recommended to use [`template()`]() helper function to render your project template files. Let's take a look at the introductory example:
+It is recommended to use [`template()`](/docs/helper-functions/) helper function to render your project template files. Let's take a look at the introductory example:
 
 #### 1. Create view the `.tpl.php` file inside project templates directory.
 
@@ -40,7 +40,7 @@ It is recommended to use [`template()`]() helper function to render your project
 
 #### 2. Render template with context using a `template()` function.
 
-> Visit the [Template]() documentations for more completed API guides.
+> Visit the [Template](/docs/template/) documentations for more completed API guides.
 
 ```php
 template('button', ['title' => 'Click me!']);
