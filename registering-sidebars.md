@@ -3,7 +3,7 @@ extends: docs
 title: "Registering sidebars"
 group: "Basics"
 subgroup: "Structure"
-prev: adding-thumbnails-sizes
+prev: adding-thumbnail-sizes
 next: adding-shortcodes
 order: 5
 ---

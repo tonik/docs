@@ -4,7 +4,7 @@ title: "Using service container"
 group: "Basics"
 subgroup: "Setup"
 prev: handling-translations
-next: registering-custom-posts-types
+next: registering-custom-post-types
 order: 5
 ---
 
