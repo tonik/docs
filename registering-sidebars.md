@@ -8,9 +8,9 @@ next: adding-shortcodes
 order: 5
 ---
 
-The sidebars are areas (managed in `Appearance > Widgets`) where you can allocate customizable widgets and display it in the specified place. You should register your sidebars inside `app/Setup/sidebars.php` file with `register_sidebar` function within `widgets_init` action hook.
+The sidebars are areas (managed in "Appearance > Widgets") where you can allocate customizable widgets and display it in the specified place.
 
-Inside `sidebars.php` you will see an example sidebar. Customize it to your needs or add another one.
+You should register your sidebars inside `app/Setup/sidebars.php` file with `register_sidebar` function within `widgets_init` action hook. Inside `sidebars.php` you will see an example sidebar. Customize it to your needs or add another one.
 
 ```php
 namespace App\Theme\Structure;
