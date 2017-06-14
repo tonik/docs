@@ -2,8 +2,8 @@
 extends: docs
 title: "Asset"
 group: "Architecture"
-prev: config
-next: integrating-advanced-custom-fields
+prev: integrating-advanced-custom-fields
+next: config
 order: 1
 ---
 
