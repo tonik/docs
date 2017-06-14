@@ -54,4 +54,4 @@ Configuration for theme structure paths, files to autoload and other settings of
 
 This configuration file is used by theme builder during the build process. It defines a list of a front-end assets used by a theme. It also setups builder and development settings.
 
-> You will find a complete guide about handling theme assets in [Registering stylesheet and scripts]() and [Development]()  documentation.
+> You will find a complete guide about handling theme assets in [Registering stylesheet and scripts](/docs/registering-stylesheets-and-scripts/) and [Development](/docs/development/) documentation.

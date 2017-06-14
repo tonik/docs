@@ -2,6 +2,9 @@
 extends: docs
 title: "Asset"
 group: "Architecture"
+prev: config
+next: integrating-advanced-custom-fields
+order: 1
 ---
 
 The `Tonik\Gin\Asset\Asset` class provides simple API for retrieving information and details about theme asset files. You can easily pull they URLs, directory paths or check if actually exist.

@@ -2,6 +2,9 @@
 extends: docs
 title: "Config"
 group: "Architecture"
+prev: asset
+next: template
+order: 2
 ---
 
 The `Tonik\Gin\Foundation\Config` class provides a simple way for creating flexible data collections. It implements the `ArrayAccess` interface so you can iterate on it as on a standard array.

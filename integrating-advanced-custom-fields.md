@@ -2,6 +2,9 @@
 extends: docs
 title: "Integrating Advanced Custom Fields"
 group: "Extending"
+prev: adding-shortcodes
+next: asset
+order: 1
 ---
 
 [Advanced Custom Fields](https://www.advancedcustomfields.com) plugin allows you to create user-friendly administration pages and custom fields.

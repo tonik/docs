@@ -2,6 +2,8 @@
 extends: docs
 title: "Theme Service Container"
 group: "Architecture"
+prev: autoloader
+order: 5
 ---
 
 The `Tonik\Gin\Foundation\Theme` class is a backbone of the theme which performs the services container role. It utilizes a [singleton pattern](//en.wikipedia.org/wiki/Singleton_pattern), so every time you initiate it you will receive the same object.

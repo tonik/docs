@@ -3,6 +3,9 @@ extends: docs
 title: "Defining AJAX responses"
 group: "Basics"
 subgroup: "Http"
+prev: registering-stylesheets-and-scripts
+next: theme-actions
+order: 2
 ---
 
 WordPress gives you an ability to define various AJAX actions, which you can afterward hit with HTTP requests in order to create dynamic JavaScript components for your theme.

@@ -3,6 +3,9 @@ extends: docs
 title: "Registering sidebars"
 group: "Basics"
 subgroup: "Structure"
+prev: adding-thumbnails-sizes
+next: adding-shortcodes
+order: 5
 ---
 
 The sidebars are areas (managed in `Appearance > Widgets`) where you can allocate customizable widgets and display it in the specified place. You should register your sidebars inside `app/Setup/sidebars.php` file with `register_sidebar` function within `widgets_init` action hook.

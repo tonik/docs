@@ -3,6 +3,9 @@ extends: docs
 title: "Theme actions"
 group: "Basics"
 subgroup: "Setup"
+prev: defining-ajax-responses
+next: theme-filters
+order: 1
 ---
 
 Actions allow you to trigger various logic at the specific moments and places when executing your application. They should be registered inside `app/Setup/actions.php` file.

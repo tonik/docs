@@ -3,6 +3,9 @@ extends: docs
 title: "Adding shortcodes"
 group: "Basics"
 subgroup: "Structure"
+prev: registering-sidebars
+next: integrating-advanced-custom-fields
+order: 6
 ---
 
 Shortcodes allow you to easily embed a dynamic content into the body of a page or post as a simple string. You should register your custom shortcodes in `app/Structure/shortcodes.php` with `add_shortcode` function.

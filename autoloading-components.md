@@ -3,6 +3,9 @@ extends: docs
 title: "Autoloading components"
 group: "Basics"
 subgroup: "General"
+prev: creating-templates
+next: helper-functions
+order: 3
 ---
 
 Dividing code into files improves project organization and readability. However, requiring all these files manually can be tough and make a mess really fast. In order to make it easier, the starter brings simple loading system for theme's components files. It uses `localize_template()` under the hood and supports child theme overriding.

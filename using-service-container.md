@@ -3,6 +3,9 @@ extends: docs
 title: "Using service container"
 group: "Basics"
 subgroup: "Setup"
+prev: handling-translations
+next: registering-custom-posts-types
+order: 5
 ---
 
 The starter introduces really simple but very helpful service container for better organization and separation of your code. Let's quote some definition:

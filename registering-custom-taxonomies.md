@@ -3,6 +3,9 @@ extends: docs
 title: "Registering custom taxonomies"
 group: "Basics"
 subgroup: "Structure"
+prev: registering-custom-post-types
+next: adding-menus-and-navigations
+order: 2
 ---
 
 Taxonomy allows for classifying your posts in groups. They should be registered inside `app/Structure/taxonomies.php` file within `init` action.

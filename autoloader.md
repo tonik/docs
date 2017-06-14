@@ -2,6 +2,9 @@
 extends: docs
 title: "Autoloader"
 group: "Architecture"
+prev: template
+next: theme-service-container
+order: 4
 ---
 
 The `Tonik\Gin\Foundation\Autoloader` class helps with autoloading theme components files.

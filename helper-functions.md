@@ -3,6 +3,9 @@ extends: docs
 title: "Helper functions"
 group: "Basics"
 subgroup: "General"
+prev: autoloading-components
+next: registering-stylesheets-and-scripts
+order: 4
 ---
 
 Starter provides a variety of global "helper" functions. They facilitate the use of starter foundation modules and functionalities. You can reach them at any moment inside your theme components.

@@ -3,6 +3,9 @@ extends: docs
 title: "Adding menus and navigations"
 group: "Basics"
 subgroup: "Structure"
+prev: registering-custom-taxonomies
+next: adding-thumbnails-sizes
+order: 3
 ---
 
 Navigations allow for creating easily customizable menus areas, which can be managed inside `Appearance > Menus` administration panel. You should register navigations in `app/Structure/navs.php` file with `register_nav_menus` function.

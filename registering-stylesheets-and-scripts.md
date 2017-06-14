@@ -3,6 +3,9 @@ extends: docs
 title: "Registering stylesheets and scripts"
 group: "Basics"
 subgroup: "Http"
+prev: helper-functions
+next: defining-ajax-responses
+order: 1
 ---
 
 Inside your theme's `config/app.js` you will find `assets` property. It holds a list of file paths which will be processed by the builder and outputted to the `public` directory.
@@ -56,7 +59,7 @@ Provide an array of assets file paths to the `assets` list. They should be regis
 
 Your assets should be enqueued inside `app/Http/assets.php` file in `register_stylesheets` or `register_scripts` functions which are hooked to the `wp_enqueue_scripts` action.
 
-> For referencing paths for assets you should use the `asset_path()` function. You can learn more about this function in [Helper functions]() documentation.
+> For referencing paths for assets you should use the `asset_path()` function. You can learn more about this function in [Helper functions](/docs/helper-functions/) documentation.
 
 ```php
 /**

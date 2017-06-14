@@ -2,6 +2,9 @@
 extends: docs
 title: "Template"
 group: "Architecture"
+prev: config
+next: autoloader
+order: 3
 ---
 
 The `Tonik\Gin\Template\Template` class provides a fluent API for working with theme template files.

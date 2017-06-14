@@ -3,6 +3,9 @@ extends: docs
 title: "Theme filters"
 group: "Basics"
 subgroup: "Setup"
+prev: theme-actions
+next: adding-theme-supports
+order: 2
 ---
 
 Filters can change an output or behavior of different parts of your theme or WordPress. They should be defined inside `app/Setup/filters.php` file.

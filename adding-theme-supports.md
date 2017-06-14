@@ -3,6 +3,9 @@ extends: docs
 title: "Adding theme supports"
 group: "Basics"
 subgroup: "Setup"
+prev: theme-filters
+next: handling-translations
+order: 3
 ---
 
 Theme supports have to be registered inside `app/Setup/supports.php` file on `after_setup_theme` action hook. Most common supports are already enabled. However, feel free to add or remove entries there.

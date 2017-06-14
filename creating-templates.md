@@ -3,6 +3,9 @@ extends: docs
 title: "Creating templates"
 group: "Basics"
 subgroup: "General"
+prev: directory-structure
+next: autoloading-components
+order: 2
 ---
 
 Separation of visual layer and application logic was always a problem while developing WordPress themes. The starter offers you some additional tools to solve this problem. Ability to share and pass data between divided templates give you a lot of flexibility.
