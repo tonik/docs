@@ -8,9 +8,9 @@ next: integrating-advanced-custom-fields
 order: 6
 ---
 
-Shortcodes allow you to easily embed a dynamic content into the body of a page or post as a simple string. You should register your custom shortcodes in `app/Structure/shortcodes.php` with `add_shortcode` function.
+Shortcodes allow you to easily embed a dynamic content into the body of a page or post as a simple string.
 
-Start with determining the structure of your custom shortcode.
+You should register your custom shortcodes in `app/Structure/shortcodes.php` with `add_shortcode` function. Start with determining the structure of your custom shortcode.
 
 ```
 [shortcode attr="attribute"]Content[/shortcode]
