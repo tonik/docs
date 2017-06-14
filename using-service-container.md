@@ -62,7 +62,7 @@ use function App\Theme\theme;
 use Tonik\Gin\Foundation\Theme;
 
 /**
- * Binds genres of book service to the theme container.
+ * Service handler for retrieving genres of the book.
  *
  * @return void
  */
@@ -99,14 +99,14 @@ namespace App\Theme\Setup;
 use function App\Theme\theme;
 
 /**
- * Binds service for retriving authorization to API.
+ * Service handler for retriving data from API.
  *
  * @return void
  */
 function bind_api_endpoint_service()
 {
   /**
-   * Binds service for retrieving authorization token for API.
+   * Bind service for retrieving data from API.
    *
    * @return array
    */
