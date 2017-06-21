@@ -11,7 +11,7 @@ Tonik is a WordPress Starter Theme which aims to modernize, organize and enhance
 ### Take a look at what is waiting for you:
 
 - [ES6](https://babeljs.io/learn-es2015/) for JavaScript
-- [SASS](http://sass-lang.com/) and [Foundation CSS Framework](http://foundation.zurb.com/sites/docs/)
+- [SASS](http://sass-lang.com/) and [Foundation CSS Framework](http://foundation.zurb.com/sites/theme/docs/)
 - [Webpack](https://webpack.js.org/) for managing, compiling and optimizing theme asset files
 - Utilizes PHP [Namespaces](http://php.net/manual/pl/language.namespaces.php)
 - Simple [Theme Service Container](http://symfony.com/doc/2.0/glossary.html#term-service-container)

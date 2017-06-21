@@ -40,7 +40,7 @@ $ git clone git@github.com:tonik/theme.git <theme-name>
 
 ## Resolving Theme Dependencies
 
-> You will find more detailed instructions about managing and building a theme in [Development](/docs/development/) documentation.
+> You will find more detailed instructions about managing and building a theme in [Development](/theme/docs/development/) documentation.
 
 In order to property bootstrap a theme you have to fetch some required dependencies and compile its assets. Before that, make sure that you are in the root folder of the theme (where `package.json` and `composer.json` files are located).
 

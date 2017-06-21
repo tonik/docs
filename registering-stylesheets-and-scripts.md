@@ -61,7 +61,7 @@ Provide an array of assets file paths to the `assets` list. They should be regis
 
 Your assets should be enqueued inside `app/Http/assets.php` file in `register_stylesheets` or `register_scripts` functions which are hooked to the `wp_enqueue_scripts` action.
 
-> For referencing paths for assets you should use the `asset_path()` function. You can learn more about this function in [Helper functions](/docs/helper-functions/) documentation.
+> For referencing paths for assets you should use the `asset_path()` function. You can learn more about this function in [Helper functions](/theme/docs/helper-functions/) documentation.
 
 ```php
 /**

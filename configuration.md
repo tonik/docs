@@ -48,10 +48,10 @@ Standard theme stylesheet file. Defines all details about the theme displayed in
 
 Configuration for theme structure paths, files to autoload and other settings of core functionalities. Each option has a short description to let you know about the usage.
 
-> You can easily access these configuration values using the global `config` helper function. Read about this in [Helper functions](/docs/helper-functions/) documentation.
+> You can easily access these configuration values using the global `config` helper function. Read about this in [Helper functions](/theme/docs/helper-functions/) documentation.
 
 #### `config/app.json`
 
 This configuration file is used by theme builder during the build process. It defines a list of a front-end assets used by a theme. It also setups builder and development settings.
 
-> You will find a complete guide about handling theme assets in [Registering stylesheet and scripts](/docs/registering-stylesheets-and-scripts/) and [Development](/docs/development/) documentation.
+> You will find a complete guide about handling theme assets in [Registering stylesheet and scripts](/theme/docs/registering-stylesheets-and-scripts/) and [Development](/theme/docs/development/) documentation.

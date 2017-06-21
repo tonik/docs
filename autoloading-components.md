@@ -41,7 +41,7 @@ You can register components in the `config/app.php` configuration file with `aut
 
 ## Usage
 
-> Visit [Autoloader](/docs/autoloader/) guide if you looking for API documentation.
+> Visit [Autoloader](/theme/docs/autoloader/) guide if you looking for API documentation.
 
 In order to autoload your own new component, add a new entry to the `autoload` list. For example, you created `app/Structure/settings.php` file, so to autoload it enter `Structure/settings.php` path to the list.
 

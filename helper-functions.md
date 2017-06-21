@@ -14,7 +14,7 @@ All helper functions should be stored in `app/helpers.php` file. Feel free to de
 
 #### `theme()`
 
-Helper function for accessing global Theme Service Container. Read more about usage in [Theme Service Container](/docs/theme-service-container/) documentation.
+Helper function for accessing global Theme Service Container. Read more about usage in [Theme Service Container](/theme/docs/theme-service-container/) documentation.
 
 Calling without any parameter returns whole theme container object.
 
@@ -48,7 +48,7 @@ theme('config', ['key' => 'value']);
 
 Alias function for resolving theme configuration defined in `config/app.php` file.
 
-The argumentless call will give you an instance of `Tonik\Gin\Foundation\Config` class which implement the `ArrayAccess` interface, so you can iterate on it like on a standard array. Learn more in [Config documentation](/docs/config/).
+The argumentless call will give you an instance of `Tonik\Gin\Foundation\Config` class which implement the `ArrayAccess` interface, so you can iterate on it like on a standard array. Learn more in [Config documentation](/theme/docs/config/).
 
 ```php
 use function App\Theme\config;
@@ -72,7 +72,7 @@ $textdomain = config('textdomain');
 
 #### `template()`
 
-Makes easy to render template parts stored in separated files. Accepts file path as the first argument and an array of values as the second argument. More detailed usage description here: [Template documentation](/docs/template/).
+Makes easy to render template parts stored in separated files. Accepts file path as the first argument and an array of values as the second argument. More detailed usage description here: [Template documentation](/theme/docs/template/).
 
 ```html
 <!-- @ resources/templates/partials/button.tpl.php -->
@@ -104,7 +104,7 @@ template(['partials/button', 'input'], ['title' => 'Click me']);
 
 #### `asset()`
 
-Returns an instance of `Tonik\Gin\Asset\Asset` class and gives you the ability to pull information like directory or URL of pulled asset. More detailed description in [Asset documentation](/docs/asset/).
+Returns an instance of `Tonik\Gin\Asset\Asset` class and gives you the ability to pull information like directory or URL of pulled asset. More detailed description in [Asset documentation](/theme/docs/asset/).
 
 ```php
 use function App\Theme\asset;
