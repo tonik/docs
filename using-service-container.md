@@ -18,9 +18,9 @@ It sounds scary, but it is an easy concept. Let's see some examples.
 ## Usage
 
 All of your bindings should be defined inside `app/Setup/services.php` file.
-It's recommended to use a [`theme()`]() helper function for operating on service container; this gives you an ability to access the container anywhere in your project components.
+It's recommended to use a [`theme()`](/docs/helper-functions/) helper function for operating on service container; this gives you an ability to access the container anywhere in your project components.
 
-> Please, visit the [Theme Service Container documentation](https://github.com/tonik/tonik/wiki/Theme-Service-Container) for a more detailed description about API.
+> Please, visit the [Theme Service Container documentation](/docs/theme-service-container/) for a more detailed description about API.
 
 #### Creating services
 

@@ -28,14 +28,14 @@ $ cd wp-content/themes
 Create project via `composer create-project` composer command.
 
 ```bash
-$ composer create-project tonik/tonik <theme-name>
+$ composer create-project tonik/theme <theme-name>
 ```
 
 You can also directly download or clone the repository to the `wp-content/themes` directory.
 
 ```bash
 # Clone repository to the <theme-name> folder.
-$ git clone git@github.com:tonik/tonik.git <theme-name>
+$ git clone git@github.com:tonik/theme.git <theme-name>
 ```
 
 ## Resolving Theme Dependencies
