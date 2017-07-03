@@ -10,8 +10,8 @@ order: 5
 
 The starter introduces really simple but very helpful service container for better organization and separation of your code. Let's quote some definition:
 
-`A Service Container is a special object that manages the instantiation of services inside an application. Instead of creating services directly, the developer trains the service container (via configuration) on how to create the services.
--- <cite>[Symfony Glossary](http://symfony.com/doc/2.0/glossary.html#term-service-container)</cite>`
+`A Service Container is a special object that manages the instantiation of services inside an application. Instead of creating services directly, the developer trains the service container (via configuration) on how to create the services.`
+-- [Symfony Glossary](http://symfony.com/doc/2.0/glossary.html#term-service-container)
 
 It sounds scary, but it is an easy concept. Let's see some examples.
 
@@ -52,7 +52,7 @@ theme('service');
 theme()->get('service');
 ```
 
-To resolve services with additional parameters by pass associative array of key and values as the second argument.
+To resolve services with additional parameters pass associative array of key and values as the second argument.
 
 ```php
 theme('service', ['key' => 'value']);
