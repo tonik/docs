@@ -36,7 +36,7 @@ $config = theme('config');
 // $config: class Tonik\Gin\Foundation\Config()
 ```
 
-You can pass arguments to the service closure as the second parameter.
+You can resolve services with additional parameters by passing it in the second argument.
 
 ```php
 theme('config', ['key' => 'value']);

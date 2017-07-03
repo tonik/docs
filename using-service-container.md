@@ -52,6 +52,20 @@ theme('service');
 theme()->get('service');
 ```
 
+To resolve services with additional parameters by pass associative array of key and values as the second argument.
+
+```php
+theme('service', ['key' => 'value']);
+```
+
+Now, you have access to these parameters inside service closure in second argument.
+
+```php
+theme()->bind('service', function(Theme $theme, array $parameters) {
+  // $parameters: ['key' => 'value']
+});
+```
+
 ## Examples
 
 ### Services for database queries
