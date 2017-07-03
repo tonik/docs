@@ -19,15 +19,16 @@ theme                              # — Root of your theme
    │   ├── Setup/                  # — Setups for theme
    │   │   ├── actions.php         # — Theme action hooks
    │   │   ├── filters.php         # — Theme filter hooks
+   │   │   ├── services.php        # — Theme services registration
+   │   │   ├── supports.php        # — Theme supports
+   │   ├── Structure/              # — Structures for theme
    │   │   ├── navs.php            # — Theme navigation areas
+   │   │   ├── posttypes.php       # — Theme custom post types
    │   │   ├── shortcodes.php      # — Theme shortcodes
    │   │   ├── sidebars.php        # — Theme widgets areas
-   │   │   ├── supports.php        # — Theme supports
+   │   │   ├── taxonomies.php      # — Theme custom taxonomies
    │   │   ├── thumbnails.php      # — Theme custom image sizes
    │   │   ├── widgets.php         # — Theme custom widgets
-   │   ├── Structure/              # — Structures for theme
-   │   │   ├── posttypes.php       # — Theme custom post types
-   │   │   ├── taxonomies.php      # — Theme custom taxonomies
    │   ├── helpers.php             # — Collection of helper functions
    ├── build/                      # — Webpack configuration and instruction files
    ├── bootstrap/                  # — Files responsible for bootstrapping a theme
