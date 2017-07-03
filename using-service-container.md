@@ -10,10 +10,8 @@ order: 5
 
 The starter introduces really simple but very helpful service container for better organization and separation of your code. Let's quote some definition:
 
-```
-A Service Container is a special object that manages the instantiation of services inside an application. Instead of creating services directly, the developer trains the service container (via configuration) on how to create the services.
--- <cite>[Symfony Glossary](http://symfony.com/doc/2.0/glossary.html#term-service-container)</cite>
-```
+`A Service Container is a special object that manages the instantiation of services inside an application. Instead of creating services directly, the developer trains the service container (via configuration) on how to create the services.
+-- <cite>[Symfony Glossary](http://symfony.com/doc/2.0/glossary.html#term-service-container)</cite>`
 
 It sounds scary, but it is an easy concept. Let's see some examples.
 
