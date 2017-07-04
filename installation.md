@@ -35,7 +35,7 @@ You can also directly download or clone the repository to the `wp-content/themes
 
 ```bash
 # Clone repository to the <theme-name> folder.
-$ git clone git@github.com:tonik/theme.git <theme-name>
+$ git clone -b master git@github.com:tonik/theme.git <theme-name>
 ```
 
 ## Resolving Theme Dependencies
