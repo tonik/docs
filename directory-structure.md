@@ -1,6 +1,6 @@
 ---
 extends: docs
-title: "Dirctory structure"
+title: "Directory structure"
 group: "Basics"
 subgroup: "General"
 prev: deployment
