@@ -83,7 +83,7 @@ use Tonik\Gin\Foundation\Theme;
  *
  * @return void
  */
-function bind_posts_fetcher_service()
+function bind_books_service()
 {
   /**
    * Binds service for retrieving posts of specific post type.
@@ -93,19 +93,19 @@ function bind_posts_fetcher_service()
    *
    * @return \WP_Post[]
    */
-  theme()->bind('posts', function (Theme $theme, $parameters) {
+  theme()->bind('books', function (Theme $theme, $parameters) {
     return new WP_Query([
-      'post_type' => $parameters['type'],
+      'post_type' => 'book',
     ]);
   });
 }
-add_action('init', 'App\Theme\Setup\bind_posts_fetcher_service');
+add_action('init', 'App\Theme\Setup\bind_books_service');
 ```
 
-Now, you can simply retrieve genre terms of specific book post anywhere in your project via registered service.
+Now, you can simply retrieve posts of book post type anywhere in your project via registered service.
 
 ```php
-$genres = theme('posts', ['type' => 'books']);
+$genres = theme('books');
 ```
 
 However, take note that bounded services always returns deposited value after first retrieving. If you want to pass to service a dynamic parameters you probably need to register service as factory:
