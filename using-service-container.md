@@ -70,7 +70,7 @@ theme()->bind('service', function(Theme $theme, array $parameters) {
 
 ### Services for database queries
 
-Standard binding with `bind` returns the same service on every resolving. It's a great place for fetching entries from the database because it gives you a certainty that you are querying your database only once.
+Standard binding with `bind` resolves service only once and returns a deposited value on every retrieving. It's a great place for fetching entries from the database because it gives you a certainty that you are querying your database only once.
 
 ```php
 namespace App\Theme\Setup;
@@ -106,6 +106,16 @@ Now, you can simply retrieve genre terms of specific book post anywhere in your 
 
 ```php
 $genres = theme('posts', ['type' => 'books']);
+```
+
+However, take note that bounded services always returns deposited value after first retrieving. If you want to pass to service a dynamic parameters you probably need to register service as factory:
+
+```php
+theme()->factory('book/grenes', function (Theme $theme, $parameters) {
+  return wp_get_post_terms($parameters['id'], 'book_grene');
+});
+
+$genres = theme('book/genres', ['id' => get_the_ID()]);
 ```
 
 ### Services for external API requests
