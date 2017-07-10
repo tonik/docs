@@ -79,31 +79,33 @@ use function App\Theme\theme;
 use Tonik\Gin\Foundation\Theme;
 
 /**
- * Service handler for retrieving genres of the book.
+ * Service handler for retrieving posts of specific post type.
  *
  * @return void
  */
-function bind_genres_of_book_service()
+function bind_posts_fetcher_service()
 {
   /**
-   * Binds service for retrieving genre of the specific book.
+   * Binds service for retrieving posts of specific post type.
    *
    * @param \Tonik\Gin\Foundation\Theme $theme  Instance of the service container
    * @param array $parameters  Parameters passed on service resolving
    *
-   * @return \WP_term[]
+   * @return \WP_Post[]
    */
-  theme()->bind('book/genres', function (Theme $theme, $parameters) {
-    return wp_get_post_terms($parameters['id'], 'book_grene');
+  theme()->bind('posts', function (Theme $theme, $parameters) {
+    return new WP_Query([
+      'post_type' => $parameters['type'],
+    ]);
   });
 }
-add_action('init', 'App\Theme\Setup\bind_genres_of_book_service');
+add_action('init', 'App\Theme\Setup\bind_posts_fetcher_service');
 ```
 
 Now, you can simply retrieve genre terms of specific book post anywhere in your project via registered service.
 
 ```php
-$genres = theme('book/genres', ['id' => get_the_ID()]);
+$genres = theme('posts', ['type' => 'books']);
 ```
 
 ### Services for external API requests
