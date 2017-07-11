@@ -29,8 +29,6 @@ Starter comes with simple CLI and `tonik` command, which allows you to easily fi
 
 > Take a note that a path to CLI file may be different if you specified custom `vendor` folder localization in `composer.json` file.
 
-> Important! CLI requires at least PHP in version 7.1 to be installed on your machine.
-
 ```bash
 # Run setup wizard.
 $ vendor/bin/tonik
