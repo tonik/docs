@@ -111,8 +111,8 @@ $genres = theme('books');
 However, take note that bounded services always returns deposited value after first retrieving. If you want to pass to service a dynamic parameters you probably need to register service as factory:
 
 ```php
-theme()->factory('book/grenes', function (Theme $theme, $parameters) {
-  return wp_get_post_terms($parameters['id'], 'book_grene');
+theme()->factory('book/genres', function (Theme $theme, $parameters) {
+  return wp_get_post_terms($parameters['id'], 'book_genre');
 });
 
 $genres = theme('book/genres', ['id' => get_the_ID()]);
