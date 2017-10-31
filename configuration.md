@@ -27,12 +27,14 @@ Here a list of all used placeholders with descriptions:
 
 Starter comes with simple CLI and `tonik` command, which allows you to easily fill these theme details and information. Simply call `vendor/bin/tonik` command in the theme root directory. A setup wizard will guide you through the entire process.
 
-> Take a note that a path to CLI file may be different if you specified custom `vendor` folder localization in `composer.json` file.
+> Important! When changing namespace, remember to enter new one with escaped backslashes (eg. `My\\Theme`).
 
 ```bash
 # Run setup wizard.
 $ vendor/bin/tonik
 ```
+
+> Take a note that a path to CLI file may be different if you specified custom `vendor` folder localization in `composer.json` file.
 
 ## Configuration Files
 
