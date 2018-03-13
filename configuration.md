@@ -22,12 +22,11 @@ Here a list of all used placeholders with descriptions:
 - `{{ theme.author }}` - Theme author name.
 - `{{ theme.author.url }}` - Website of theme author.
 - `{{ theme.textdomain }}` - Theme textdomain string for gettext localization.
+- `{{ theme.parent }}` - Name of the parent theme, if initializing child theme.
 
 ## Initiating with CLI
 
 Starter comes with simple CLI and `tonik` command, which allows you to easily fill these theme details and information. Simply call `vendor/bin/tonik` command in the theme root directory. A setup wizard will guide you through the entire process.
-
-> Important! When changing namespace, remember to enter new one with escaped backslashes (eg. `My\\Theme`).
 
 ```bash
 # Run setup wizard.
@@ -42,7 +41,7 @@ All of the configuration settings of a theme are stored in the `config/` directo
 
 #### `style.css`
 
-Standard theme stylesheet file. Defines all details about the theme displayed in admin panel. Refer to [Codex](https://codex.wordpress.org/Theme_Development#Theme_Stylesheet) for more information.
+Standard theme stylesheet file. Defines all details about the theme displayed in the admin panel. Refer to [Codex](https://codex.wordpress.org/Theme_Development#Theme_Stylesheet) for more information.
 
 #### `config/app.php`
 
@@ -52,6 +51,24 @@ Configuration for theme structure paths, files to autoload and other settings of
 
 #### `config/app.json`
 
-This configuration file is used by theme builder during the build process. It defines a list of a front-end assets used by a theme. It also setups builder and development settings.
+This configuration file is used by theme builder during the build process. It defines a list of front-end assets used by a theme. It also setups builder and development settings.
 
 > You will find a complete guide about handling theme assets in [Registering stylesheet and scripts](/theme/docs/registering-stylesheets-and-scripts/) and [Development](/theme/docs/development/) documentation.
+
+## Environment
+
+It is useful to have different builder configuration based on the environment where the application is running. For example, developers may use various local development stacks and may need to set up different BrowserSync configurations.
+
+#### `.env` file
+
+Inside a theme's root folder you will find a sample `.env.example` file. Rename the file to `.env` and adjust variables inside as needed. For example, configure BrowserSync to proxy a `wocker.test` address.
+
+> Your .env file should not be committed to your application's source control.
+
+```
+BROWSERSYNC_HOST="localhost"
+BROWSERSYNC_PORT=3000
+BROWSERSYNC_PROXY="http://wocker.test/"
+```
+
+Review the file `build/app.config.js` file to see all available environment variables.
