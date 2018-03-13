@@ -35,7 +35,7 @@ wp_enqueue_script('script-ajax');
 Register listener for your AJAX action.
 
 ```php
-namespace App\Theme\Http;
+namespace Tonik\Theme\App\Http;
 
 function handle_ajax_action()
 {
@@ -43,8 +43,8 @@ function handle_ajax_action()
 
   die();
 }
-add_action('wp_ajax_my_action', 'App\Theme\Http\handle_ajax_action');
-add_action('wp_ajax_nopriv_my_action', 'App\Theme\Http\handle_ajax_action');
+add_action('wp_ajax_my_action', 'Tonik\Theme\App\Http\handle_ajax_action');
+add_action('wp_ajax_nopriv_my_action', 'Tonik\Theme\App\Http\handle_ajax_action');
 ```
 
 ### 3. Calling actions from JavaScript

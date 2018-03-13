@@ -13,13 +13,13 @@ Registering own thumbnails allows for creating additional images sizes, beyond t
 Your new image sizes should be registered inside `app/Setup/thumbnails.php` file with `add_image_size` function within `after_setup_theme` action hook.
 
 ```php
-namespace App\Theme\Structure;
+namespace Tonik\Theme\App\Structure;
 
 function add_image_sizes()
 {
   add_image_size('custom-thumbnail', 800, 600, true);
 }
-add_action('after_setup_theme', 'App\Theme\Structure\add_image_sizes');
+add_action('after_setup_theme', 'Tonik\Theme\App\Structure\add_image_sizes');
 ```
 
 ## Usage

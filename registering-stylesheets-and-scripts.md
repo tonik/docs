@@ -77,7 +77,7 @@ function register_stylesheets() {
     wp_enqueue_style('shop-finder', asset_path('css/shop-finder.css'));
   }
 }
-add_action('wp_enqueue_scripts', 'App\Theme\Http\register_stylesheets');
+add_action('wp_enqueue_scripts', 'Tonik\Theme\App\Http\register_stylesheets');
 ```
 
 ```php
@@ -94,7 +94,7 @@ function register_scripts() {
     wp_enqueue_script('shop-finder', asset_path('js/shop-finder.js'), ['jquery'], null, true);
   }
 }
-add_action('wp_enqueue_scripts', 'App\Theme\Http\register_scripts');
+add_action('wp_enqueue_scripts', 'Tonik\Theme\App\Http\register_scripts');
 ```
 
 ### 4. Run theme builder

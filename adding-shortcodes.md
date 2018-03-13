@@ -19,14 +19,14 @@ You should register your custom shortcodes in `app/Structure/shortcodes.php` wit
 Next, register shortcode handler function.
 
 ```
-namespace App\Theme\Structure;
+namespace Tonik\Theme\App\Structure;
 
 function render_shortcode($atts, $content)
 {
   // $atts: ['attr' => 'attribute']
   // $content: 'Content'
 }
-add_shortcode('shortcode', 'App\Theme\Structure\render_shortcode');
+add_shortcode('shortcode', 'Tonik\Theme\App\Structure\render_shortcode');
 ```
 
 ## Examples
@@ -38,7 +38,7 @@ You may use `template()` function to render markup of elements. It is a great wa
 Your handler function needs to return a string instead of outputting. We can achieve this by starting output buffer before using `template` function and returning content of the buffer from the handler.
 
 ```
-namespace App\Theme\Structure;
+namespace Tonik\Theme\App\Structure;
 
 function render_button_shortcode($atts, $content)
 {
@@ -52,5 +52,5 @@ function render_button_shortcode($atts, $content)
 
   return ob_get_clean();
 }
-add_shortcode('button', 'App\Theme\Structure\render_button_shortcode');
+add_shortcode('button', 'Tonik\Theme\App\Structure\render_button_shortcode');
 ```

@@ -13,7 +13,7 @@ Taxonomy allows for classifying your posts in groups.
 They should be registered inside `app/Structure/taxonomies.php` file within `init` action. Starter registers `book_genre` taxonomy as an example. Customize it to your needs.
 
 ```php
-namespace App\Theme\Structure;
+namespace Tonik\Theme\App\Structure;
 
 function register_book_genre_taxonomy()
 {
@@ -27,5 +27,5 @@ function register_book_genre_taxonomy()
     'public' => true,
   ]);
 }
-add_action('init', 'App\Theme\Structure\register_book_genre_taxonomy');
+add_action('init', 'Tonik\Theme\App\Structure\register_book_genre_taxonomy');
 ```

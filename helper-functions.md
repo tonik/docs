@@ -19,7 +19,7 @@ Helper function for accessing global Theme Service Container. Read more about us
 Calling without any parameter returns whole theme container object.
 
 ```php
-use function App\Theme\theme;
+use function Tonik\Theme\App\theme;
 
 $theme = theme();
 
@@ -29,7 +29,7 @@ $theme = theme();
 You can easily resolve services from the container by calling `theme($key)` function with service registration key.
 
 ```php
-use function App\Theme\theme;
+use function Tonik\Theme\App\theme;
 
 $config = theme('config');
 
@@ -51,7 +51,7 @@ Alias function for resolving theme configuration defined in `config/app.php` fil
 The argumentless call will give you an instance of `Tonik\Gin\Foundation\Config` class which implement the `ArrayAccess` interface, so you can iterate on it like on a standard array. Learn more in [Config documentation](/theme/docs/config/).
 
 ```php
-use function App\Theme\config;
+use function Tonik\Theme\App\config;
 
 $config = config();
 
@@ -61,7 +61,7 @@ $config = config();
 You can also resolve direct configuration values. Simply run `config` function with option key as an argument.
 
 ```php
-use function App\Theme\config;
+use function Tonik\Theme\App\config;
 
 $textdomain = config('textdomain');
 
@@ -79,7 +79,7 @@ Makes easy to render template parts stored in separated files. Accepts file path
 <button><?= $title ?></button>
 ```
 ```php
-use function App\Theme\template;
+use function Tonik\Theme\App\template;
 
 template('partials/button', ['title' => 'Click me']);
 
@@ -93,7 +93,7 @@ You can also pass file path as an array. This allows you to render altered varia
 <input type="submit" value="<?= $title ?>">
 ```
 ```php
-use function App\Theme\template;
+use function Tonik\Theme\App\template;
 
 template(['partials/button', 'input'], ['title' => 'Click me']);
 
@@ -107,7 +107,7 @@ template(['partials/button', 'input'], ['title' => 'Click me']);
 Returns an instance of `Tonik\Gin\Asset\Asset` class and gives you the ability to pull information like directory or URL of pulled asset. More detailed description in [Asset documentation](/theme/docs/asset/).
 
 ```php
-use function App\Theme\asset;
+use function Tonik\Theme\App\asset;
 
 $asset = asset('css/app.css');
 
@@ -121,7 +121,7 @@ $asset = asset('css/app.css');
 Simplifies retrieving URLs of the theme's static assets.
 
 ```php
-use function App\Theme\asset;
+use function Tonik\Theme\App\asset;
 
 $path = asset_path('css/app.css');
 

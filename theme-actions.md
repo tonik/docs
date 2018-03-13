@@ -13,13 +13,13 @@ Actions allow you to trigger various logic at the specific moments and places wh
 They should be registered inside `app/Setup/actions.php` file. As a simple example, let's output `Hello World` to the footer.
 
 ```php
-namespace App\Theme\Setup;
+namespace Tonik\Theme\App\Setup;
 
 function render_text()
 {
   echo "Hello world!";
 }
-add_action('wp_footer', 'App\Theme\Setup\render_text');
+add_action('wp_footer', 'Tonik\Theme\App\Setup\render_text');
 ```
 
 ## Examples
@@ -54,9 +54,9 @@ We also need main controller file for sidebar itself. It should just render `sid
 ```php
 // @ sidebar.php
 
-namespace App\Theme;
+namespace Tonik\Theme\App;
 
-use function App\Theme\template;
+use function Tonik\Theme\App\template;
 
 template('partials/sidebar');
 ```
@@ -66,11 +66,11 @@ Finally, hook to previously created action inside `single.tpl.php` and output si
 ```php
 // @ app/Setup/actions.php
 
-namespace App\Theme\Setup;
+namespace Tonik\Theme\App\Setup;
 
 function render_sidebar()
 {
   get_sidebar();
 }
-add_action('theme/single/sidebar', 'App\Theme\Setup\render_sidebar');
+add_action('theme/single/sidebar', 'Tonik\Theme\App\Setup\render_sidebar');
 ```

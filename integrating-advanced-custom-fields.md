@@ -38,9 +38,9 @@ Remember to add a file path of the new component to autoload list inside a confi
 Let's create the settings page for our theme.
 
 ```php
-namespace App\Theme\Structure\ACF;
+namespace Tonik\Theme\App\Structure\ACF;
 
-use function App\Theme\config;
+use function Tonik\Theme\App\config;
 
 acf_add_options_page([
   'page_title' => __('Theme Settings', config('textdomain')),

@@ -26,12 +26,12 @@ It's recommended to use a [`theme()`](/theme/docs/helper-functions/) helper func
 
 You should register your project bindings within a named function which is attached to the `init` action hook. This will give you a confidence that everything is booted and ready for binding.
 
-Register your service with `theme()` helper inside the hooked function. Remember to import a proper use statement (`use function App\Theme\theme`).
+Register your service with `theme()` helper inside the hooked function. Remember to import a proper use statement (`use function Tonik\Theme\App\theme`).
 
 ```php
-namespace App\Theme\Setup;
+namespace Tonik\Theme\App\Setup;
 
-use function App\Theme\theme;
+use function Tonik\Theme\App\theme;
 
 function bind_service()
 {
@@ -39,7 +39,7 @@ function bind_service()
     return true;
   });
 }
-add_action('init', 'App\Theme\Setup\bind_service');
+add_action('init', 'Tonik\Theme\App\Setup\bind_service');
 ```
 
 #### Retrieving services
@@ -73,9 +73,9 @@ theme()->bind('service', function(Theme $theme, array $parameters) {
 Standard binding with `bind` resolves service only once and returns a deposited value on every retrieving. It's a great place for fetching entries from the database because it gives you a certainty that you are querying your database only once.
 
 ```php
-namespace App\Theme\Setup;
+namespace Tonik\Theme\App\Setup;
 
-use function App\Theme\theme;
+use function Tonik\Theme\App\theme;
 use Tonik\Gin\Foundation\Theme;
 
 /**
@@ -99,7 +99,7 @@ function bind_books_service()
     ]);
   });
 }
-add_action('init', 'App\Theme\Setup\bind_books_service');
+add_action('init', 'Tonik\Theme\App\Setup\bind_books_service');
 ```
 
 Now, you can simply retrieve posts of book post type anywhere in your project via registered service.
@@ -123,9 +123,9 @@ $genres = theme('book/genres', ['id' => get_the_ID()]);
 You may also define services which connect to the external resources. Use in pair with transients to achieve the best performance.
 
 ```php
-namespace App\Theme\Setup;
+namespace Tonik\Theme\App\Setup;
 
-use function App\Theme\theme;
+use function Tonik\Theme\App\theme;
 
 /**
  * Service handler for retriving data from API.
@@ -154,7 +154,7 @@ function bind_api_endpoint_service()
     return json_decode($response['body']);
   });
 }
-add_action('init', 'App\Theme\Setup\bind_api_endpoint_service');
+add_action('init', 'Tonik\Theme\App\Setup\bind_api_endpoint_service');
 ```
 
 You should define APIs configuration keys as constants in the `wp-config.php` file.

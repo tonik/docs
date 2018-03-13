@@ -13,9 +13,9 @@ Navigations allow for creating easily customizable menus areas, which can be man
 You should register navigations in `app/Structure/navs.php` file with `register_nav_menus` function. By default, starter registers the "Primary" navigation.
 
 ```php
-namespace App\Theme\Structure;
+namespace Tonik\Theme\App\Structure;
 
-use function App\Theme\config;
+use function Tonik\Theme\App\config;
 
 function register_navigation_areas()
 {
@@ -23,15 +23,15 @@ function register_navigation_areas()
     'primary' => __('Primary', config('textdomain')),
   ]);
 }
-add_action('after_setup_theme', 'App\Theme\Structure\register_navigation_areas');
+add_action('after_setup_theme', 'Tonik\Theme\App\Structure\register_navigation_areas');
 ```
 
 Add new entries to the array in order to register additional navigations. Assist yourself by using `config()` function to localize menu titles.
 
 ```php
-namespace App\Theme\Structure;
+namespace Tonik\Theme\App\Structure;
 
-use function App\Theme\config;
+use function Tonik\Theme\App\config;
 
 function register_navigation_areas()
 {
@@ -40,7 +40,7 @@ function register_navigation_areas()
     'secondary' => __('Secondary', config('textdomain')),
   ]);
 }
-add_action('after_setup_theme', 'App\Theme\Structure\register_navigation_areas');
+add_action('after_setup_theme', 'Tonik\Theme\App\Structure\register_navigation_areas');
 ```
 
 ## Usage

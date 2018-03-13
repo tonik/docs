@@ -29,7 +29,7 @@ echo __('Hello world!')
 Note! Instead of explicitly entering your project textdomain string you should take advantage of theme configuration. Use [`config()`]() helper function to pull textdomain directly from `config/app.php` file.
 
 ```php
-use function App\Theme\config;
+use function Tonik\Theme\App\config;
 
 echo __('Hello world!', config('textdomain'))
 ```

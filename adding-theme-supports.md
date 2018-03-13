@@ -17,13 +17,13 @@ Theme supports have to be registered inside `app/Setup/supports.php` file on `af
 Simply call `add_theme_support()` function with choosen option inside hooked function.
 
 ```php
-namespace App\Theme\Setup;
+namespace Tonik\Theme\App\Setup;
 
-use function App\Theme\config;
+use function Tonik\Theme\App\config;
 
 function add_theme_supports()
 {
   add_theme_support('post-thumbnails');
 }
-add_action('after_setup_theme', 'App\Theme\Setup\add_theme_supports');
+add_action('after_setup_theme', 'Tonik\Theme\App\Setup\add_theme_supports');
 ```

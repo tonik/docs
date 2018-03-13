@@ -32,7 +32,7 @@ You may also customize extension of template files. By default, it is `.tpl.php`
 
 It is recommended to use [`template()`](/theme/docs/helper-functions/) helper function to render your project template files. Let's take a look at the introductory example:
 
-#### 1. Create view the `.tpl.php` file inside project templates directory.
+#### 1. Create a `.tpl.php` file inside project templates directory.
 
 ```html
 <button><?= $title ?></button>
@@ -77,7 +77,7 @@ Inside the `single.php` controller file, we will simply render a template create
 ```php
 // @ single.php
 
-use function App\Theme\template;
+use function Tonik\Theme\App\template;
 
 template('single');
 ```
@@ -105,7 +105,7 @@ function render_post_content()
 {
   template('partials/post/content');
 }
-add_action('theme/single/content', 'App\Theme\Setup\render_post_content');
+add_action('theme/single/content', 'Tonik\Theme\App\Setup\render_post_content');
 ```
 
 Nothing blocks you from hooking template rendering handler to multiple actions. This allows you to reuse various template blocks, keep logic separation and still stay DRY. Great!

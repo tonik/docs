@@ -13,9 +13,9 @@ The sidebars are areas (managed in "Appearance > Widgets") where you can allocat
 You should register your sidebars inside `app/Setup/sidebars.php` file with `register_sidebar` function within `widgets_init` action hook. Inside `sidebars.php` you will see an example sidebar. Customize it to your needs or add another one.
 
 ```php
-namespace App\Theme\Structure;
+namespace Tonik\Theme\App\Structure;
 
-use function App\Theme\config;
+use function Tonik\Theme\App\config;
 
 function register_widget_areas()
 {
@@ -25,7 +25,7 @@ function register_widget_areas()
     'description' => __('Website sidebar', config('textdomain')),
   ]);
 }
-add_action('widgets_init', 'App\Theme\Structure\register_widget_areas');
+add_action('widgets_init', 'Tonik\Theme\App\Structure\register_widget_areas');
 ```
 
 ## Usage
