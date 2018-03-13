@@ -37,7 +37,7 @@ $ vendor/bin/tonik
 
 ## Configuration Files
 
-All of the configuration settings of a theme are stored in the `config/` directory and main `style.css` file.
+General configuration settings of a theme are stored in the `config/` directory and main `style.css` file.
 
 #### `style.css`
 
@@ -55,15 +55,25 @@ This configuration file is used by theme builder during the build process. It de
 
 > You will find a complete guide about handling theme assets in [Registering stylesheet and scripts](/theme/docs/registering-stylesheets-and-scripts/) and [Development](/theme/docs/development/) documentation.
 
-## Environment
+## Environment configuration
 
 It is useful to have different builder configuration based on the environment where the application is running. For example, developers may use various local development stacks and may need to set up different BrowserSync configurations.
 
-#### `.env` file
-
-Inside a theme's root folder you will find a sample `.env.example` file. Rename the file to `.env` and adjust variables inside as needed. For example, configure BrowserSync to proxy a `wocker.test` address.
+Inside a theme's root folder you will find a sample `.env.example` file. Rename the file to `.env` and adjust variables inside as needed. Review the file `build/app.config.js` file to see all available environment variables.
 
 > Your .env file should not be committed to your application's source control.
+
+### Setting up BroswerSync
+
+[BroswerSync](//browsersync.io/) can monitor your files for changes and automatically refresh browser for you. Configure its settings in `.env` file and start Webpack's development server using the `npm run watch` command. Now, after every file modification, your changes will be instantly reflected in the browser.
+
+```
+BROWSERSYNC_HOST="localhost"
+BROWSERSYNC_PORT=3000
+BROWSERSYNC_PROXY="http://localhost:8080/"
+```
+
+For example, if you are using [Wocker](//wckr.github.io/), simply pass `wocker.test` domain as a proxy field value. After you should be able to visit your WordPress installation at http://localhost:3000/ address.
 
 ```
 BROWSERSYNC_HOST="localhost"
@@ -71,4 +81,26 @@ BROWSERSYNC_PORT=3000
 BROWSERSYNC_PROXY="http://wocker.test/"
 ```
 
-Review the file `build/app.config.js` file to see all available environment variables.
+### Linting project Stylesheets
+
+You can configure linting rules for project in `.stylelintrc` file. By default, starter setups only 4 space indentation. It doesn't enforce you to uncomfortable settings, so feel free to add here your own set of rules. You can find all available rules on [Stylelint website](//stylelint.io/user-guide/rules/).
+
+```json
+{
+  "rules": {
+    "indentation": 4
+  }
+}
+```
+
+### Linting project JavaScript
+
+JavaScript linting rules can be configured in `.eslintrc` file. You can find all available rules on [ESLint website](//eslint.org/docs/rules/).
+
+```json
+{
+  "rules": {
+    "indent": ["error", 2]
+  }
+}
+```
