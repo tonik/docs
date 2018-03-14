@@ -117,8 +117,10 @@ theme()->bind('child.service', function() {
 After learning about prefixes from previous paragraphIt is now clear that child theme configuration can be accessed at `child.config` service name.
 
 ```php
-// Gets child theme config values.
+// Gets child theme config values ...
 $config = theme('child.config');
+// ... as well as config helper function
+$config = config();
 ```
 
 A call to `config` service will still return a parent theme configuration values.
