@@ -22,7 +22,6 @@ Here a list of all used placeholders with descriptions:
 - `{{ theme.author }}` - Theme author name.
 - `{{ theme.author.url }}` - Website of theme author.
 - `{{ theme.textdomain }}` - Theme textdomain string for gettext localization.
-- `{{ theme.parent }}` - Name of the parent theme, if initializing child theme.
 
 ## Initiating with CLI
 

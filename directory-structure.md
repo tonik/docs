@@ -35,7 +35,7 @@ theme                              # — Root of your theme
 General folder for components of your theme. All of the autoloaded files of your theme will be stored in this directory. Folder structure inside is not strict, feel free to adjust it to your preferences.
 
 - `Http` - Modules responsible for registering theme's stylesheets and javascript files or defining AJAX responses
-- `Setup` - Modules to adjust various parts of the WordPress like actions, filters or supports
+- `Setup` - Modules to adjust various parts of the WordPress like actions, filters or supports by theme
 - `Structure` - Modules that registers structures like custom post types, navigations or sidebars
 
 #### `bootstrap/`
