@@ -10,8 +10,7 @@ order: 5
 
 The starter introduces really simple but very helpful service container for better organization and separation of your code. Let's quote some definition:
 
-`A Service Container is a special object that manages the instantiation of services inside an application. Instead of creating services directly, the developer trains the service container (via configuration) on how to create the services.`
--- [Symfony Glossary](http://symfony.com/doc/2.0/glossary.html#term-service-container)
+> A Service Container is a special object that manages the instantiation of services inside an application. Instead of creating services directly, the developer trains the service container (via configuration) on how to create the services. -- [Symfony Glossary](http://symfony.com/doc/2.0/glossary.html#term-service-container)
 
 It sounds scary, but it is an easy concept. Let's see some examples.
 
@@ -75,8 +74,9 @@ Standard binding with `bind` resolves service only once and returns a deposited 
 ```php
 namespace Tonik\Theme\App\Setup;
 
-use function Tonik\Theme\App\theme;
+use WP_Query;
 use Tonik\Gin\Foundation\Theme;
+use function Tonik\Theme\App\theme;
 
 /**
  * Service handler for retrieving posts of specific post type.

@@ -18,7 +18,7 @@ You should register your custom shortcodes in `app/Structure/shortcodes.php` wit
 
 Next, register shortcode handler function.
 
-```
+```php
 namespace Tonik\Theme\App\Structure;
 
 function render_shortcode($atts, $content)
@@ -37,7 +37,7 @@ You may use `template()` function to render markup of elements. It is a great wa
 
 Your handler function needs to return a string instead of outputting. We can achieve this by starting output buffer before using `template` function and returning content of the buffer from the handler.
 
-```
+```php
 namespace Tonik\Theme\App\Structure;
 
 function render_button_shortcode($atts, $content)

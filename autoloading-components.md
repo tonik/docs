@@ -22,20 +22,21 @@ You can register components in the `config/app.php` configuration file with `aut
 
 ```php
 'autoload' => [
-  'helpers.php',
-  'Structure/navs.php',
-  'Structure/widgets.php',
-  'Structure/sidebars.php',
-  'Structure/posttypes.php',
-  'Structure/taxonomies.php',
-  'Structure/shortcodes.php',
-  'Structure/thumbnails.php',
-  'Setup/actions.php',
-  'Setup/filters.php',
-  'Setup/supports.php',
-  'Setup/services.php',
-  'Http/assets.php',
-  'Http/ajaxes.php',
+    'helpers.php',
+    'Http/assets.php',
+    'Http/ajaxes.php',
+    'Setup/actions.php',
+    'Setup/filters.php',
+    'Setup/supports.php',
+    'Setup/services.php',
+    'Structure/navs.php',
+    'Structure/widgets.php',
+    'Structure/sidebars.php',
+    'Structure/templates.php',
+    'Structure/posttypes.php',
+    'Structure/taxonomies.php',
+    'Structure/shortcodes.php',
+    'Structure/thumbnails.php',
 ]
 ```
 
