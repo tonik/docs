@@ -28,3 +28,19 @@ Tonik Starter Theme follows [WordPress recommended requirements](https://wordpre
 - PHP >= 7.0
 - [Composer](https://getcomposer.org)
 - [Node.js](https://nodejs.org)
+
+### Understanding Starter Assumptions
+
+Today, WordPress theme development is pretty rough. Starter aims to introduce some standardized and comfortable ways for creating advanced WordPress powered websites. However, you have to understand where it works the best. Here are some answers that can be helpful:
+
+**Just starting the PHP and WordPress adventure?**
+
+Probably not. It favors modern and advanced concepts. We do not discourage you but, grow as the developer and come back you will appreciate it twice.
+
+**Creating a theme which will be widely distributed (e.g. through WordPress.org repository)?**
+
+No. Strong reliance on modern toolset like Composer, NPM or Webpack requires a hight web development knowlage. It wasn’t designed with casual use in mind.
+
+**Creating an advanced website, which will be continuously developed?**
+
+Definitely. Better organization, readable structures, patterns and modern principles. Your team will love it, just dig in into the documentation.
