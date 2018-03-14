@@ -54,7 +54,9 @@ You can expect this output:
 
 ## Examples
 
-Managing templates rendering with hooks is a great way for creating a reusable and easy to maintain visual layer of your theme.
+Managing templates rendering with hooks is a great way for creating a reusable and easy to maintain visual layer of your theme. 
+
+> It's recomended to store template's rendering actions inside a `app/Structure/templates.php` file.
 
 ### Rendering theme's single post view with help of hooks
 
@@ -76,6 +78,8 @@ Inside the `single.php` controller file, we will simply render a template create
 
 ```php
 // @ single.php
+
+namespace Tonik\Theme\Single;
 
 use function Tonik\Theme\App\template;
 
@@ -99,13 +103,68 @@ We can proceed and create a view file for a post content.
 Now, we can hook to a `theme/single/content` action, which are executed inside `single.tpl.php` file, and render previously created template for post content.
 
 ```php
-// @ app/Setup/actions.php
+// @ app/Structure/templates.php
+
+namespace Tonik\Theme\App\Structure;
+
+use function Tonik\Theme\App\template;
 
 function render_post_content()
 {
   template('partials/post/content');
 }
-add_action('theme/single/content', 'Tonik\Theme\App\Setup\render_post_content');
+add_action('theme/single/content', 'Tonik\Theme\App\Structure\render_post_content');
 ```
 
 Nothing blocks you from hooking template rendering handler to multiple actions. This allows you to reuse various template blocks, keep logic separation and still stay DRY. Great!
+
+### Rendering a sidebar with custom actions hooks
+
+Start with a `single.tpl.php` post template with side content, but instead of immediately outputting the sidebar body, execute custom `theme/single/sidebar` action. You will later hook to that action in order to render actual sidebar.
+
+```html
+<!-- @ resources/templates/single.tpl.php -->
+
+<aside>
+  <?php do_action('theme/single/sidebar') ?>
+</aside>
+```
+
+Next, create the `sidebar.tpl.php` where you will output specified sidebar with `dynamic_sidebar` function.
+
+```html
+<!-- @ resources/templates/partials/sidebar.tpl.php -->
+
+<?php if (is_active_sidebar('sidebar')) : ?>
+  <?php dynamic_sidebar('sidebar') ?>
+<?php else: ?>
+  <h5>Sidebar</h5>
+  <p>Your sidebar is empty.</p>
+<?php endif; ?>
+```
+
+We also need main controller file for sidebar itself. It should just render `sidebar.tpl.php` template.
+
+```php
+// @ sidebar.php
+
+namespace Tonik\Theme\Sidebar;
+
+use function Tonik\Theme\App\template;
+
+template('partials/sidebar');
+```
+
+Finally, hook to previously created action inside `single.tpl.php` and output sidebar (the `sidebar.php` file) with `get_sidebar()` function.
+
+```php
+// @ app/Structure/templates.php
+
+namespace Tonik\Theme\App\Structure;
+
+function render_sidebar()
+{
+  get_sidebar();
+}
+add_action('theme/single/sidebar', 'Tonik\Theme\App\Structure\render_sidebar');
+```

@@ -24,53 +24,19 @@ add_action('wp_footer', 'Tonik\Theme\App\Setup\render_text');
 
 ## Examples
 
-### Rendering template partials with actions
-
-Start with making a `single.tpl.php` post template with side content, but instead of immediately outputting the sidebar body, execute custom `theme/single/sidebar` action. You will later hook to that action in order to render actual sidebar.
-
-```html
-<!-- @ resources/templates/single.tpl.php -->
-
-<aside>
-  <?php do_action('theme/single/sidebar') ?>
-</aside>
-```
-
-Next, create the `sidebar.tpl.php` where you will output specified sidebar with `dynamic_sidebar` function.
-
-```html
-<!-- @ resources/templates/partials/sidebar.tpl.php -->
-
-<?php if (is_active_sidebar('sidebar')) : ?>
-  <?php dynamic_sidebar('sidebar') ?>
-<?php else: ?>
-  <h5>Sidebar</h5>
-  <p>Your sidebar is empty.</p>
-<?php endif; ?>
-```
-
-We also need main controller file for sidebar itself. It should just render `sidebar.tpl.php` template.
+### Using action to reconfigure PHPMailer to use SMTP
 
 ```php
-// @ sidebar.php
-
-namespace Tonik\Theme\App;
-
-use function Tonik\Theme\App\template;
-
-template('partials/sidebar');
-```
-
-Finally, hook to previously created action inside `single.tpl.php` and output sidebar (the `sidebar.php` file) with `get_sidebar()` function.
-
-```php
-// @ app/Setup/actions.php
-
 namespace Tonik\Theme\App\Setup;
 
-function render_sidebar()
+function recofigure_phpmailer_to_smtp($phpmailer)
 {
-  get_sidebar();
+    $phpmailer->isSMTP();
+    $phpmailer->Host = 'host';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 2525;
+    $phpmailer->Username = 'username';
+    $phpmailer->Password = 'password';
 }
-add_action('theme/single/sidebar', 'Tonik\Theme\App\Setup\render_sidebar');
+add_action('phpmailer_init', 'Tonik\Theme\App\Setup\swap_mail_to_use_mailtrap');
 ```
