@@ -41,7 +41,7 @@ $asset->setFile('js/app.js');
 
 #### Getting asset relative path
 
-Gets asset path relatively to the project root directory.
+Gets a relative path of an asset to the project root directory.
 
 ```php
 $asset->getRelativePath();

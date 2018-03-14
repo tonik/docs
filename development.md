@@ -21,7 +21,7 @@ Theme uses [NPM](//www.npmjs.com/) as a front-end dependency manager and [Compos
 
 #### Resolving dependencies
 
-Before be able to build theme you have to resolve required dependencies.
+Before being able to build theme you have to resolve required dependencies.
 
 ```bash
 # @ wp-content/themes/<theme-name>
@@ -101,11 +101,11 @@ use Monolog\Handler\StreamHandler;
 
 ## Customizing build process
 
-Builder rules and procedures are stored in the `build/` directory. Default settings of builder are contained in a `webpack.config.js` and `app.config.js` files. These settings are extended with theme's `config/app.json` configuration file where you can easily overwrite defaults.
+Builder rules and procedures are stored in the `build/` directory. Default settings of the builder are contained in a `webpack.config.js` and `app.config.js` files. These settings are extended with theme's `config/app.json` configuration file where you can easily overwrite defaults.
 
 ### Customizing assets filenames and output paths
 
-You can control outputted names with enviourment variables in `.env` file. For example, we want to output our `.css` files inside a `styles` folder.
+You can control outputted names with environment variables in `.env` file. For example, we want to output our `.css` files inside a `styles` folder.
 
 ```json
 FILENAME_CSS="styles/[name].css"
@@ -113,7 +113,7 @@ FILENAME_CSS="styles/[name].css"
 
 > Filenames have to use [Webpack placeholders](https://webpack.js.org/configuration/output/#output-filename) to determine asset name or extension.
 
-Below you will find all avaible envourment variables and a defaultly used filenames placeholders
+Below you will find all available environment variables and used filenames placeholders
 
 | Variable | Description | Default |
 |---|---|---|
@@ -126,7 +126,7 @@ Below you will find all avaible envourment variables and a defaultly used filena
 
 ### Giving access to the global variables inside theme's scripts
 
-To bypass conflicts with global variables, scripts outputted by Webpack are enclosed inside scope. This force you to say explicitly which external variables you want inside theme scripts.
+To bypass conflicts with global variables, scripts outputted by Webpack are enclosed inside a scope. This force you to say explicitly which external variables you want inside theme scripts.
 
 > By default, starter gives you access to the jQuery shipped with WordPress.
 

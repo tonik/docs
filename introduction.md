@@ -39,7 +39,7 @@ Probably not. It favors modern and advanced concepts. We do not discourage you b
 
 **Creating a theme which will be widely distributed (e.g. through WordPress.org repository)?**
 
-No. Strong reliance on modern toolset like Composer, NPM or Webpack requires a hight web development knowlage. It wasn’t designed with casual use in mind.
+No. Strong reliance on modern toolsets like Composer, NPM or Webpack requires a hight web development knowledge. It wasn’t designed for casual use in mind.
 
 **Creating an advanced website, which will be continuously developed?**
 

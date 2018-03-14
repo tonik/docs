@@ -35,7 +35,7 @@ add_shortcode('shortcode', 'Tonik\Theme\App\Structure\render_shortcode');
 
 You may use `template()` function to render markup of elements. It is a great way to maintain separation of presentation logic and business logic.
 
-Your handler function needs to return a string instead of outputting. We can achieve this by starting output buffer before using `template` function and returning content of the buffer from the handler.
+Your handler function needs to return a string instead of outputting. We can achieve this by starting output buffer before using `template` function and returning a content of the buffer from the handler.
 
 ```php
 namespace Tonik\Theme\App\Structure;

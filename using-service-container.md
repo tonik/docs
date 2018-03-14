@@ -51,13 +51,13 @@ theme('service');
 theme()->get('service');
 ```
 
-To resolve services with additional parameters pass associative array of key and values as the second argument.
+To resolve services with additional parameters pass an associative array of key and values as the second argument.
 
 ```php
 theme('service', ['key' => 'value']);
 ```
 
-Now, you have access to these parameters inside service closure in second argument.
+Now, you have access to these parameters inside service closure in the second argument.
 
 ```php
 theme()->bind('service', function(Theme $theme, array $parameters) {
@@ -108,7 +108,7 @@ Now, you can simply retrieve posts of book post type anywhere in your project vi
 $genres = theme('books');
 ```
 
-However, take note that bounded services always returns deposited value after first retrieving. If you want to pass to service a dynamic parameters you probably need to register service as factory:
+However, take note that bounded services always returns deposited value after first retrieving. If you want to pass dynamic parameters  to service you probably need to register service as a factory:
 
 ```php
 theme()->factory('book/genres', function (Theme $theme, $parameters) {

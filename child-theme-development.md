@@ -11,7 +11,7 @@ The Tonik Starter Theme supports a standard parent-child theme workflow. However
 
 ## Installation
 
-WordPress child theme should be placed in the same `wp-content/themes` folder as parent theme. Here we have to fetch our fresh starter files.
+WordPress child theme should be placed in the same `wp-content/themes` folder as a parent theme. Here we have to fetch our fresh starter files.
 
 ### 1. Creating New Child Theme
 
@@ -53,7 +53,7 @@ $ wp theme activate <theme-name>
 
 ## Configuration
 
-Starter uses special placeholder strings for various theme details and information (like name, description and project textdomain). Child Theme additionaly introduces a `{{ theme.parent }}` placeholder for defining a folder name of the parent theme.
+Starter uses special placeholder strings for various theme details and information (like name, description and project textdomain). Child Theme additionally introduces a `{{ theme.parent }}` placeholder for defining a folder name of the parent theme.
 
 ## Initiating with CLI
 
@@ -66,7 +66,7 @@ $ vendor/bin/tonik
 
 ## Directory Structure
 
-Structure of a child theme is quite simlar to the parent.
+Structure of a child theme is quite similar to the parent.
 
 ```
 child-theme              # — Root of your theme
@@ -85,24 +85,24 @@ child-theme              # — Root of your theme
 
 #### `child/`
 
-Holds child theme specific components. Files it this folder are additionaly by child theme in `functions.php` file.
+Holds child theme specific components. Files it this folder are additionally by child theme in `functions.php` file.
 
 - `Http` - Modules responsible for registering child theme's stylesheets and javascript files
-- `Setup` - Modules to adjust various parts of the WordPress like actions, filters or supports by child theme
+- `Setup` - Modules to adjust various parts of the WordPress like actions, filters or supports by a child theme
 
 ## Developing
 
-By default child boilerplate do not comes with builder or task runner for theme's assets. However, if you need it, you can copy relevant Webpack configuration files and settings directly from a parent theme.
+By default, child boilerplate does not come with the builder or task runner for theme's assets. However, if you need it, you can copy relevant Webpack configuration files and settings directly from a parent theme.
 
 ### Overwriting Parent Files
 
-Autoload and Template components uses `localize_template` to include files, so parent files can be easily overwrited by child theme. They only have to be accessible at the same path as they are in the parent. 
+Autoload and Template components use `localize_template` to include files, so parent files can be easily overwritten by a child theme. They only have to be accessible on the same path as they are in the parent. 
 
-For example, let's overwrite one of the parent template file. Assume that parent contains a `footer.tpl.php` file in `resources/templates` directory. Now to  you just have to create same file at the same filepath in child theme.
+For example, let's overwrite one of the parent template file. Assume that parent contains a `footer.tpl.php` file in `resources/templates` directory. Now to you just have to create the same file at the same file path in a child theme.
 
 ### Understanding a Service Container
 
-It's important to understood that a service container is shared across parent and child theme. Thanks to this you have access to all services defined in parent theme and you can easily use it directly in child theme files.
+It's important to understand that a service container is shared across parent and child theme. Thanks to this you have access to all services defined in parent theme and you can easily use it directly in child theme files.
 
 However, this enforces you to namespace new services defined at child level. It is recommended to prefix service names with `child` keyword.
 
@@ -114,7 +114,7 @@ theme()->bind('child.service', function() {
 
 ### Accessing Child and Parent Theme Configs
 
-After learning about prefixes from previous paragraphIt is now clear that child theme configuration can be accessed at `child.config` service name.
+After learning about prefixes from the previous paragraph. It is now clear that child theme configuration can be accessed at `child.config` service name.
 
 ```php
 // Gets child theme config values ...

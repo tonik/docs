@@ -82,7 +82,7 @@ BROWSERSYNC_PROXY="http://wocker.test/"
 
 ### Linting project Stylesheets
 
-You can configure linting rules for project in `.stylelintrc` file. By default, starter setups only 4 space indentation. It doesn't enforce you to uncomfortable settings, so feel free to add here your own set of rules. You can find all available rules on [Stylelint website](//stylelint.io/user-guide/rules/).
+You can configure linting rules for the project in `.stylelintrc` file. By default, starter setups only 4 space indentation. It doesn't enforce you to uncomfortable settings, so feel free to add here your own set of rules. You can find all available rules on [Stylelint website](//stylelint.io/user-guide/rules/).
 
 ```json
 {

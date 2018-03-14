@@ -8,7 +8,7 @@ next: creating-templates
 order: 1
 ---
 
-This starter theme introduces "easy to follow" folder structure, which enforces to divide your theme logic into separate files. For quick overview take a look at the structure tree bellow.
+This starter theme introduces "easy to follow" folder structure, which enforces to divide your theme logic into separate files. For quick overview take a look at the structure tree below.
 
 ```
 theme                              # — Root of your theme
@@ -36,7 +36,7 @@ General folder for components of your theme. All of the autoloaded files of your
 
 - `Http` - Modules responsible for registering theme's stylesheets and javascript files or defining AJAX responses
 - `Setup` - Modules to adjust various parts of the WordPress like actions, filters or supports by theme
-- `Structure` - Modules that registers structures like custom post types, navigations or sidebars
+- `Structure` - Modules that register structures like custom post types, navigations or sidebars
 
 #### `bootstrap/`
 

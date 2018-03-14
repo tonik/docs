@@ -13,7 +13,7 @@ The `Tonik\Gin\Foundation\Autoloader` class helps with autoloading theme compone
 
 ### Initializing autoloader
 
-Autoloader class requires instance of `Tonik\Gin\Foundation\Config` to be injected with setup `paths`, `directories` and `autoload` properties. The `autoload` option should include list of component relative to the `app/` directory paths.
+Autoloader class requires an instance of `Tonik\Gin\Foundation\Config` to be injected with setup `paths`, `directories` and `autoload` properties. The `autoload` option should include a list of components relative paths to the `app/` directory paths.
 
 ```php
 use Tonik\Gin\Foundation\Config;
@@ -42,9 +42,9 @@ To autoload listed component simply call `load` method. This will `require_once`
 $autoloader->load();
 ```
 
-### Getting relative path of autoloaded component
+### Getting relative path of an autoloaded component
 
-Gets path of a specified component relatively to the project `app` directory.
+Gets relative path of a specified component to the project `app` directory.
 
 ```php
 $autoloader->getRelativePath('Http/assets.php');
@@ -52,7 +52,7 @@ $autoloader->getRelativePath('Http/assets.php');
 // 'app/Http/assets.php'
 ```
 
-### Getting path of autoloaded component
+### Getting path of an autoloaded component
 
 Gets full directory path to the component file on your server.
 

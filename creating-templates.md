@@ -54,7 +54,7 @@ You can expect this output:
 
 ## Examples
 
-Managing templates rendering with hooks is a great way for creating a reusable and easy to maintain visual layer of your theme. 
+Managing templates rendering with hooks is a great way for creating a reusable and easy to maintain a visual layer of your theme. 
 
 > It's recomended to store template's rendering actions inside a `app/Structure/templates.php` file.
 
