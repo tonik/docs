@@ -62,9 +62,9 @@ Inside a theme's root folder you will find a sample `.env.example` file. Rename 
 
 > Your .env file should not be committed to your application's source control.
 
-### Setting up BroswerSync
+### Setting up BrowserSync
 
-[BroswerSync](//browsersync.io/) can monitor your files for changes and automatically refresh browser for you. Configure its settings in `.env` file and start Webpack's development server using the `npm run watch` command. Now, after every file modification, your changes will be instantly reflected in the browser.
+[BrowserSync](//browsersync.io/) can monitor your files for changes and automatically refresh browser for you. Configure its settings in `.env` file and start Webpack's development server using the `npm run watch` command. Now, after every file modification, your changes will be instantly reflected in the browser.
 
 ```
 BROWSERSYNC_HOST="localhost"
