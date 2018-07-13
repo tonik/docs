@@ -121,7 +121,7 @@ $asset = asset('css/app.css');
 Simplifies retrieving URLs of the theme's static assets.
 
 ```php
-use function Tonik\Theme\App\asset;
+use function Tonik\Theme\App\asset_path;
 
 $path = asset_path('css/app.css');
 
