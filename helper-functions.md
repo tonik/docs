@@ -107,7 +107,7 @@ template(['partials/button', 'input'], ['title' => 'Click me']);
 Returns an instance of `Tonik\Gin\Asset\Asset` class and gives you the ability to pull information like directory or URL of pulled asset. More detailed description in [Asset documentation](/theme/docs/asset/).
 
 ```php
-use function Tonik\Theme\App\Asset;
+use function Tonik\Theme\App\asset;
 
 $asset = asset('css/app.css');
 
@@ -121,7 +121,7 @@ $asset = asset('css/app.css');
 Simplifies retrieving URLs of the theme's static assets.
 
 ```php
-use function Tonik\Theme\App\Asset;
+use function Tonik\Theme\App\asset_path;
 
 $path = asset_path('css/app.css');
 
