@@ -34,7 +34,7 @@ $ cd <theme-name>
 
 # @ /wp-content/themes/<theme-name>
 # Install required composer dependences (without these needed only to development).
-$ composer install -o --no-devs
+$ composer install -o --no-dev
 
 # @ /wp-content/themes/<theme-name>
 # Install required npm dependences for building a theme.
